@@ -8,6 +8,10 @@ import { SidebarComponent } from './menu/sidebar/sidebar.component';
 import { ContentmenuComponent } from './menu/contentmenu/contentmenu.component';
 import { ContentComponent } from './content/content.component';
 import { NavComponent } from './nav/nav.component';
+import { OverviewComponent } from './content/overview/overview.component';
+import { AddjourneyComponent } from './content/addjourney/addjourney.component';
+import { LivetrackerComponent } from './content/livetracker/livetracker.component';
+import { BackgroundComponent } from './content/background/background.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { NavComponent } from './nav/nav.component';
     SidebarComponent,
     ContentmenuComponent,
     ContentComponent,
-    NavComponent
+    NavComponent,
+    OverviewComponent,
+    AddjourneyComponent,
+    LivetrackerComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,
