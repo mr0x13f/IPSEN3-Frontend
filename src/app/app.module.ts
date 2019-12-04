@@ -12,6 +12,7 @@ import { OverviewComponent } from './content/overview/overview.component';
 import { AddjourneyComponent } from './content/addjourney/addjourney.component';
 import { LivetrackerComponent } from './content/livetracker/livetracker.component';
 import { BackgroundComponent } from './content/background/background.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BackgroundComponent } from './content/background/background.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
