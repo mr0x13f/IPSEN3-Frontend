@@ -1,1 +1,39 @@
-<p>sidebar works!</p>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav class="sidenav" #sidenav>
+        <p><button class="hamburger-button" mat-button (click)="sidenav.toggle()">
+            <mat-icon>close</mat-icon>
+        </button></p>
+        <ul class="menu-options">
+            <li>
+                <p>
+                    <mat-icon>laptop</mat-icon>Projects
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                <mat-icon>work</mat-icon>Companies
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    <mat-icon>person-outline</mat-icon>Log Out
+                </p>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    <mat-icon>delete-sweep</mat-icon>Delete Account
+                </p>
+                <hr>
+            </li>
+        </ul>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+        <p><button class="hamburger-button" mat-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button></p>
+    </mat-sidenav-content>
+</mat-sidenav-container>

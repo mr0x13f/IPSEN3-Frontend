@@ -1,0 +1,10 @@
+app-menu {
+    position: fixed;
+    height: 100vh;
+}
+
+app-nav {
+    position: fixed;
+    width: 100vw;
+    top: 95vh;
+}
