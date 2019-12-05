@@ -13,6 +13,17 @@ import { AddjourneyComponent } from './content/addjourney/addjourney.component';
 import { LivetrackerComponent } from './content/livetracker/livetracker.component';
 import { BackgroundComponent } from './content/background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
+import { 
+  MatToolbarModule, 
+  MatSidenavModule 
+} from '@angular/material';
+
+const material = [
+  MatToolbarModule,
+  MatSidenavModule
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +41,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    material,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+.nav-bar {
+    justify-content: space-between;
+    padding-bottom: 0;
+}
+
+.nav-button {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
