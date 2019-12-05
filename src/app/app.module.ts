@@ -15,10 +15,14 @@ import { BackgroundComponent } from './content/background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
+import { OverviewItemComponent } from './content/overview/overview-item/overview-item.component';
+
 import { 
   MatToolbarModule, 
   MatSidenavModule 
 } from '@angular/material';
+
+
 
 const material = [
   MatToolbarModule,
@@ -36,7 +40,8 @@ const material = [
     OverviewComponent,
     AddjourneyComponent,
     LivetrackerComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    OverviewItemComponent
   ],
   imports: [
     BrowserModule,
