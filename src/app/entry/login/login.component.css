@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+}
+
+
+.login-form{
+    width: 50%;
+    top: 30vh;
+    position: relative;
+
+    margin: auto;
+}
+
+.login-edit{
+    font-size: 1.4em;
+    border-radius: 20px;
+    width: 100vw;
+}
+
+.username-edit{
+    width: 400px;
+}
+
+.password-edit{
+    width: 400px;
+}
