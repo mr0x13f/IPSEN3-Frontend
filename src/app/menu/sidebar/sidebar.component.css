@@ -5,17 +5,17 @@
 
 .sidenav {
     width: 20vw;
-    background-color: rgb(242, 243, 255);
+    background-color: #3080B6;
     color: black;
 }
 
 .hamburger-button {
     margin: 0;
-    padding: 3px 20px 15px 10px;
+    padding: 3px 20px 10px 10px;
     border: 1px solid #FEFEFE;
     border-bottom-right-radius: 50px;
     font-size: 30px;
-    background-color: rgba(2, 100, 166, 1);
+    background-color: #0264a6;
     color: #FEFEFE;
 
 }
@@ -32,6 +32,7 @@
     vertical-align: middle;
     text-align: left;
     cursor: pointer;
+    color: #FEFEFE;
 }
 
 .menu-options li p {
@@ -44,12 +45,8 @@
     margin: 0 2vw;
 }
 
-hr {
-    margin: 0 1vw;
-}
-
 .menu-options li:hover {
-    color: rgb(148, 148, 148)
+    color: rgb(177, 177, 177);
 }
 
 @media(max-width: 750px) {
