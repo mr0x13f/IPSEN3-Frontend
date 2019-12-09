@@ -1,33 +1,44 @@
 *{
-    font-family: roboto;
+    font-family: "roboto", sans-serif;
     font-size: 1.1em;
     display: inline;
 }
 
-.smallView {
-    width: 100pt;
+.container {
+    width: 400px;
     position: relative;
     color: white;
     background-color: rgba(80, 80, 80, 0.5);
-    padding: 5px;
+    padding: 3px 0px;
+    display: inline-block;
 }
 
-.plaats {
-    min-width: 60%;
+.container:hover {
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+.destination {
+    width: 60%;
     position: relative;
     padding-left: 5px;
+    display: inline-block;
 }
 
-.bedrag {
+.sum {
     width: 30%;
     position: relative;
     font-weight: bold;
     padding-left: 5px;
+    display: inline-block;
 }
 
-.vinkje {
-    width: 10%;
+.checkmark {
+    width: 22px;
     position: relative;
-    margin-right: 5%;
     padding-left: 5px;
+    display: inline-block;
+}
+
+.checkmark-image {
+    max-height: 22px;
 }
