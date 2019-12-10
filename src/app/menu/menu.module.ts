@@ -3,33 +3,38 @@ import { NgModule } from '@angular/core';
 
 import { MenuComponent } from './menu.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { ContentmenuComponent } from './contentmenu/contentmenu.component';
+import { ProjectsComponent } from './sidebar/projects/projects.component';
+import { CompaniesComponent } from './sidebar/companies/companies.component';
 
 import { 
     MatToolbarModule, 
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule,
+    MatButtonModule
   } from '@angular/material';
   
   const material = [
     MatToolbarModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule,
+    MatButtonModule
   ];  
 
 @NgModule({
     declarations: [
       MenuComponent,
       SidebarComponent,
-      ContentmenuComponent
+      ProjectsComponent,
+      CompaniesComponent
     ],
     imports: [
       material
     ],
     exports: [
         MenuComponent,
-        SidebarComponent,
-        ContentmenuComponent
+        SidebarComponent
     ],
     providers: [],
     bootstrap: []
