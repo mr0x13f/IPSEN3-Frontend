@@ -11,7 +11,7 @@ import { NavComponent } from './nav/nav.component';
 import { OverviewComponent } from './content/overview/overview.component';
 import { AddjourneyComponent } from './content/addjourney/addjourney.component';
 import { LivetrackerComponent } from './content/livetracker/livetracker.component';
-import { BackgroundComponent } from './content/background/background.component';
+import { BackgroundComponent } from './background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
