@@ -5,8 +5,8 @@ div.livetracker {
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 
     /* Palette */
     --border-color: #007BD3;
@@ -18,7 +18,7 @@ div.livetracker {
 div.livetracker.stop {
 
     /* Palette */
-    --border-color: rgb(141, 0, 0);
+    --border-color: rgb(179, 0, 0);
     --main-color: rgb(255, 0, 0);
     --hover-color: #ff4444;
 
@@ -34,7 +34,7 @@ div.livetracker label {
 
     /* Appearance */
     color: #fff;
-    font-size: 5em;
+    font-size: 3.5em;
     text-align: center;
     line-height: 1em;
     pointer-events: none;
