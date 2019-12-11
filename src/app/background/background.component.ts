@@ -30,7 +30,7 @@ export class BackgroundComponent implements OnInit {
     let ctx = canvas.getContext("2d");
     ctx.canvas.width  = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = "white";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, 0, 0);
   }
