@@ -1,0 +1,19 @@
+.container {
+    background-color: rgba(30, 30, 30, 0.5);
+    box-sizing: border-box;
+    margin: auto;
+    padding: auto;
+    max-width: 30%;
+    max-height: 70%;
+    min-width: 450px;
+    min-height: 200px;
+    border-radius: 20px;
+}
+
+.overview-list {
+    list-style: none;
+}
+
+.item {
+    margin: auto;
+}
