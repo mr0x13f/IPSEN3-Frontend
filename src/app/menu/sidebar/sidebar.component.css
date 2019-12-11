@@ -48,8 +48,9 @@ ul {
 }
 
 .mat-expansion-panel-header-title {
-        color: #FEFEFE;
-        font-size: 20px;
+    text-align: left !important;
+    color: #FEFEFE;
+    font-size: 20px;
 }
 
 .mat-expansion-panel {
@@ -58,12 +59,13 @@ ul {
 }
 
 ::ng-deep .mat-raised-button {
-    width: 15vw;
+    text-align: left !important;
+    height: 5vh;
+    width: 18vw;
     background-color: #1972AE;
     color: #FEFEFE;
     font-size: 20px;
     font-weight: normal;
-    padding: 5px 24px 5px 24px;
 }
 
 ::ng-deep .mat-expansion-indicator:after {
