@@ -13,6 +13,9 @@ import { AddjourneyComponent } from './content/addjourney/addjourney.component';
 import { LivetrackerComponent } from './content/livetracker/livetracker.component';
 import { BackgroundComponent } from './background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EntryComponent } from './entry/entry.component';
+import { LoginComponent } from './entry/login/login.component';
+import { RegisterComponent } from './entry/register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     OverviewComponent,
     AddjourneyComponent,
     LivetrackerComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    EntryComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

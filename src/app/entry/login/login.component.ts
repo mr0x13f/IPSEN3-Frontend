@@ -12,4 +12,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToRegister(){
+    console.log("Goto Register")
+  }
 }
