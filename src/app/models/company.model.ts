@@ -1,4 +1,4 @@
-class Company {
+export class Company {
 
     constructor(
         public companyId: string,
