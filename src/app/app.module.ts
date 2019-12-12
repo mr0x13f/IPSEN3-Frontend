@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
@@ -19,9 +20,27 @@ import {
   MatSidenavModule 
 } from '@angular/material';
 
+import {
+   MatNativeDateModule, 
+   MatDatepickerModule, 
+   MatFormFieldModule, 
+   MatInputModule,
+   MatButtonModule,
+   MatCardModule
+   } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
 const material = [
   MatToolbarModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatNativeDateModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonModule,
+  MatCardModule
 ];
 
 @NgModule({
@@ -41,7 +60,10 @@ const material = [
     BrowserAnimationsModule,
     material,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    material,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
