@@ -1,10 +1,13 @@
-<ul class="container">
+<ul class="container" (click)="toggle()">
     <li class="smallview">
         <div class="destination">{{ journey.destination }}</div>
         <div class="sum">{{ journey.totalCost | currency : 'EUR'}}</div>
-        <div class="checkmark"><img src="..\..\..\assets\images\checkmark_green.png" class="checkmark-image"></div>
+        <div class="checkmark fas fa-check" [ngClass]="{'is-checked': journey.isBilled}"></div>
     </li>
-    <li class="bs-collapse">
-
+    <li class="bs-collapse collapse" [ngClass]="{'open': open}">
+        hier meer info
+        <br>
+        <br>
+        hier meer info
     </li>
 </ul>

@@ -8,8 +8,13 @@ import { Journey } from 'src/app/models/journey.model';
 })
 export class OverviewItemComponent implements OnInit {
   @Input() journey: Journey;
+  open = false;
 
   constructor() { }
+
+  toggle() {
+    this.open = !this.open;
+  }
 
   ngOnInit() {
   }
