@@ -1,10 +1,12 @@
 app-menu {
     position: fixed;
     height: 100vh;
+    z-index: 2;
 }
 
 app-nav {
     position: fixed;
     width: 100vw;
     top: 95vh;
+    z-index: 1;
 }

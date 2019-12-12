@@ -12,6 +12,7 @@ import { BackgroundComponent } from './background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MenuModule } from './menu/menu.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { 
   MatToolbarModule, 
@@ -39,7 +40,8 @@ const material = [
     MenuModule,
     BrowserAnimationsModule,
     material,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

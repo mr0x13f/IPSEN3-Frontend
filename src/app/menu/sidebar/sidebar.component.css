@@ -72,8 +72,8 @@ ul {
     color: #FEFEFE;
 }
 
-@media(max-width: 750px) {
+@media(max-width: 500px) {
     .sidenav {
-        width: 150px;
+        width: 100vw;
     }
-} 
+}

@@ -27,7 +27,14 @@
                 <hr>
             </li>
             <li #accountsettings>
-                <button mat-raised-button><mat-icon class="menu-option-icon">settings</mat-icon>Account Settings</button>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <mat-icon class="menu-option-icon">settings</mat-icon>Account Settings
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <app-companies></app-companies>
+                </mat-expansion-panel>
                 <hr>
             </li>
             <li #logout>
