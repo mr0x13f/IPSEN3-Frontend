@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -13,6 +14,28 @@ import { AddjourneyComponent } from './content/addjourney/addjourney.component';
 import { LivetrackerComponent } from './content/livetracker/livetracker.component';
 import { BackgroundComponent } from './content/background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import {
+   MatNativeDateModule, 
+   MatDatepickerModule, 
+   MatFormFieldModule, 
+   MatInputModule,
+   MatButtonModule,
+   MatCardModule
+   } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
+const material = [
+  MatNativeDateModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonModule,
+  MatCardModule
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +53,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    material,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
