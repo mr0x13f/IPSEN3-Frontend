@@ -7,9 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LivetrackerComponent implements OnInit {
 
+  isTracking: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleTracking() {
+    this.isTracking = !this.isTracking;
+
+    if (this.isTracking) {
+      this.startTracking();
+    } else {
+      this.stopTracking();
+    }
+  }
+
+  startTracking() {
+    // start tracking
+  }
+
+  stopTracking() {
+    // stop tracking
   }
 
 }
