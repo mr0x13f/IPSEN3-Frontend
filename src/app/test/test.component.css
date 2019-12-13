@@ -1,0 +1,15 @@
+.popup-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:  center;
+    align-items:  center;
+    
+}
+
+.popup-holder{
+    background-color: rgb(83, 55, 55);
+    padding: 2rem 4rem;
+}

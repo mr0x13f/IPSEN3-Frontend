@@ -13,6 +13,7 @@ import {
     MatExpansionModule,
     MatButtonModule
   } from '@angular/material';
+import { AccountSettingsComponent } from './sidebar/account-settings/account-settings.component';
   
   const material = [
     MatToolbarModule,
@@ -27,7 +28,8 @@ import {
       MenuComponent,
       SidebarComponent,
       ProjectsComponent,
-      CompaniesComponent
+      CompaniesComponent,
+      AccountSettingsComponent
     ],
     imports: [
       material

@@ -29,6 +29,8 @@ import {
    MatCardModule
    } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestComponent } from './test/test.component';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 
@@ -40,7 +42,8 @@ const material = [
   MatFormFieldModule,
   MatInputModule,
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  OverlayModule
 ];
 
 @NgModule({
@@ -51,7 +54,8 @@ const material = [
     OverviewComponent,
     AddjourneyComponent,
     LivetrackerComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
