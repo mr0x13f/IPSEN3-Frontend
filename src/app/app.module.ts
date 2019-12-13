@@ -4,9 +4,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { SidebarComponent } from './menu/sidebar/sidebar.component';
-import { ContentmenuComponent } from './menu/contentmenu/contentmenu.component';
 import { ContentComponent } from './content/content.component';
 import { NavComponent } from './nav/nav.component';
 import { OverviewComponent } from './content/overview/overview.component';
@@ -14,7 +11,14 @@ import { AddjourneyComponent } from './content/addjourney/addjourney.component';
 import { LivetrackerComponent } from './content/livetracker/livetracker.component';
 import { BackgroundComponent } from './background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { MenuModule } from './menu/menu.module';
+import { HttpClientModule } from '@angular/common/http';
 
+import { 
+  MatToolbarModule, 
+  MatSidenavModule 
+} from '@angular/material';
 
 import {
    MatNativeDateModule, 
@@ -29,6 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 const material = [
+  MatToolbarModule,
+  MatSidenavModule,
   MatNativeDateModule,
   MatDatepickerModule,
   MatFormFieldModule,
@@ -40,9 +46,6 @@ const material = [
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    SidebarComponent,
-    ContentmenuComponent,
     ContentComponent,
     NavComponent,
     OverviewComponent,
@@ -53,6 +56,11 @@ const material = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MenuModule,
+    BrowserAnimationsModule,
+    material,
+    FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     material,
     ReactiveFormsModule
