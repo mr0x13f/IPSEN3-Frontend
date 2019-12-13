@@ -9,7 +9,7 @@
     padding: 0;
     display: inline-block;
     font-family: "roboto", sans-serif;
-    font-size: 1.3em;
+    font-size: 1.4em;
     list-style-type: none;
     border-bottom: 1px solid rgba(80, 80, 80);
 }
@@ -23,7 +23,7 @@
 }
 
 .checkmark {
-    background-color: lightgrey;
+    background-color: #8E8E8E;
     position: relative;
     font-size: 14px;
     display: flex;
@@ -37,46 +37,44 @@
 
 .collapse {
     display: none;
+    transform: scale(100%, 0%);
+    transition: transform 0.5s;
 }
 
 .collapse.open {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 7px;
+    transform: scale(100%, 100%);
+    margin-top: 5px;
 }
 
 .checkmark.is-checked {
-    background-color: lightgreen;
+    background-color: #00C400;
+}
+
+.title {
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+.smallview, .collapse.open {
+    padding: 2px 5px;
 }
 
 .smallview {
-    padding: 2px 5px;
     display: grid;
     grid-template-columns: 2fr 1fr 24px;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
 
-/* 
-.destination1 {
-    width: 60%;
-    position: relative;
-    padding-left: 5px;
-    display: inline-block;
-    min-width: 170px;
+.hiddenview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
 }
-
-.sum1 {
-    width: 30%;
-    min-width: 70px;
-    position: relative;
-    font-weight: bold;
-    padding-left: 5px;
-    display: inline-block;
-}
-
-.checkmark1 {
-    width: 22px;
-    position: relative;
-    padding-left: 2px;
-    display: inline-block;
-}
-*/

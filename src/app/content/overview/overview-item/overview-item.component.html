@@ -1,13 +1,37 @@
 <ul class="container" (click)="toggle()">
     <li class="smallview">
-        <div class="destination">{{ journey.destination }}</div>
-        <div class="sum">{{ journey.totalCost | currency : 'EUR'}}</div>
+        <div>{{ journey.destination }}</div>
+        <div>{{ journey.totalCost | currency : 'EUR'}}</div>
         <div class="checkmark fas fa-check" [ngClass]="{'is-checked': journey.isBilled}"></div>
     </li>
     <li class="bs-collapse collapse" [ngClass]="{'open': open}">
-        hier meer info
-        <br>
-        <br>
-        hier meer info
+        <div>
+            <div class="title">Datum</div>
+            <div>{{ journey.date }}</div>
+        </div>
+        <div>
+            <div class="title">Kilometers</div>
+            <div>{{ journey.kilometers }}</div>
+        </div>
+        <div>
+            <div class="title">Project</div>
+            <div>{{ journey.projectId }}</div>
+        </div>
+        <div>
+            <div class="title">Voertuig</div>
+            <div>{{ journey.licensePlate }}</div>
+        </div>
+        <div>
+            <div class="title">Parkeerkosten</div>
+            <div>{{ journey.parkingCost | currency : 'EUR'}}</div>
+        </div>
+        <div>
+            <div class="title">Overige kosten</div>
+            <div>{{ journey.otherCost | currency : 'EUR'}}</div>
+        </div>
+        <div>
+            <div class="title">Tarief per KM</div>
+            <div>{{ journey.rate | currency : 'EUR'}}</div>
+        </div>
     </li>
 </ul>
