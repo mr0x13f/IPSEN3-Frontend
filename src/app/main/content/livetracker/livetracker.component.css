@@ -7,6 +7,7 @@ div.livetracker {
     left: 50%;
     width: 300px;
     height: 300px;
+    z-index: 1;
 
 }
 
