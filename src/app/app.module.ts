@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './main/menu/menu.component';
 import { SidebarComponent } from './main/menu/sidebar/sidebar.component';
-import { ContentmenuComponent } from './main/menu/contentmenu/contentmenu.component';
 import { ContentComponent } from './main/content/content.component';
 import { NavComponent } from './main/nav/nav.component';
 import { OverviewComponent } from './main/content/overview/overview.component';
@@ -20,7 +19,7 @@ import { RegisterComponent } from './entry/register/register.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { FormsModule } from '@angular/forms';
-import { MenuModule } from './menu/menu.module';
+import { MenuModule } from './main/menu/menu.module';
 import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
