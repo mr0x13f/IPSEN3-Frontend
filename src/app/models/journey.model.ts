@@ -1,4 +1,4 @@
-class Journey {
+export class Journey {
 
     constructor(
         public journeyId: string,

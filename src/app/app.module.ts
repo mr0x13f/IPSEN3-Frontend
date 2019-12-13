@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './main/menu/menu.component';
@@ -18,6 +19,9 @@ import { LoginComponent } from './entry/login/login.component';
 import { RegisterComponent } from './entry/register/register.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
+import { FormsModule } from '@angular/forms';
+import { MenuModule } from './menu/menu.module';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -25,12 +29,39 @@ const appRoutes: Routes = [
   { path: 'main', component: MainComponent }
 ]
 
+
+
+import { 
+  MatToolbarModule, 
+  MatSidenavModule 
+} from '@angular/material';
+
+import {
+   MatNativeDateModule, 
+   MatDatepickerModule, 
+   MatFormFieldModule, 
+   MatInputModule,
+   MatButtonModule,
+   MatCardModule
+   } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
+const material = [
+  MatToolbarModule,
+  MatSidenavModule,
+  MatNativeDateModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonModule,
+  MatCardModule
+];
+
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    SidebarComponent,
-    ContentmenuComponent,
     ContentComponent,
     NavComponent,
     OverviewComponent,
@@ -46,7 +77,15 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MenuModule,
+    BrowserAnimationsModule,
+    material,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    material,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
