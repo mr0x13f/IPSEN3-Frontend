@@ -1,8 +1,9 @@
+
+
 <div class="background1">
-    <app-login *ngIf="login"></app-login>
-    <app-register *ngIf="!login"></app-register>
-    <!-- NG IF -->
+    <router-outlet></router-outlet>
+
+    <!-- <app-login *ngIf="!inRegisterScreen"></app-login>
+    <app-register *ngIf="inRegisterScreen"></app-register> -->
 </div>
 
-
-<div></div>

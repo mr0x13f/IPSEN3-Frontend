@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-login',
@@ -8,11 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   constructor() { }
+  @Output() valueChange = new EventEmitter();
 
   ngOnInit() {
-  }
-
-  goToRegister(){
-    console.log("Goto Register")
   }
 }

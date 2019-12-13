@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @Component({
   selector: 'app-entry',
@@ -6,11 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./entry.component.css']
 })
 export class EntryComponent implements OnInit {
-  public login = true;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+ngOnInit(){
+  
+}
 
 }
