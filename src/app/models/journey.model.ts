@@ -41,7 +41,7 @@ export class Journey {
         this.creatorId = creatorId;
     }
 
-    get totalCost(): number {
+    getTotalCost(): number {
 
         return this.kilometers * this.rate + this.parkingCost + this.otherCost;
 

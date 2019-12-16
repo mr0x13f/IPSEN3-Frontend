@@ -37,16 +37,10 @@
 
 .collapse {
     display: none;
-    transform: scale(100%, 0%);
-    transition: transform 0.5s;
 }
 
 .collapse.open {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 5px;
-    grid-row-gap: 7px;
-    transform: scale(100%, 100%);
+    display: contents;
     margin-top: 5px;
 }
 
@@ -57,6 +51,12 @@
 .title {
     font-size: 0.8em;
     font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+.journey-data {
+    font-size: 1em;
     margin: 0;
     padding: 0;
 }
@@ -72,9 +72,14 @@
     grid-row-gap: 5px;
 }
 
-.hiddenview {
+.small-items {
+    padding: 0px 5px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    grid-row-gap: 7px;
+}
+
+.wide-items {
+    padding: 7px 5px 10px 5px;
 }
