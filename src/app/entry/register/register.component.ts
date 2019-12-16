@@ -4,6 +4,7 @@ import { SourceListMap } from 'source-list-map';
 import { FormsModule } from '@angular/forms';
 import { WebDriverLogger } from 'blocking-proxy/built/lib/webdriver_logger';
 import { User } from '../../models/user.model';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   imports:[
@@ -24,12 +25,14 @@ export class RegisterComponent implements OnInit {
   user = new EventEmitter<User>();
 
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
 
+
   onRegisterUser(){
+    console.log("onRegisterFunctie");
     const name = this.nameInputRef.nativeElement.value;
     const email = this.emailInputRef.nativeElement.value;
     const password = this.passwordInputRef.nativeElement.value;
@@ -40,10 +43,17 @@ export class RegisterComponent implements OnInit {
                           
     console.log(user.email + '\t' + user.name + '\t' + user.password);
   
-    if( this.confirmPasswordInputRef.nativeElement.value === this.confirmPasswordInputRef.nativeElement.value){
-    }else{
-      //todo Feedback geven
-    }
+    // if( this.confirmPasswordInputRef.nativeElement.value === this.confirmPasswordInputRef.nativeElement.value){
+      const userJSON = JSON.stringify(user);
+      console.log(userJSON);
+
+      this.http.post('http://localhost:8080/user/register',
+                       userJSON).subscribe(responseData =>{
+                         console.log(responseData);
+                       });
+    // }else{
+    //   //todo Feedback geven
+    // }
   }
 
 
