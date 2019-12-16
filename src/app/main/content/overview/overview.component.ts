@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Journey } from "src/app/models/journey.model";
+import { Journey } from "../../../models/journey.model";
 
 
 @Component({

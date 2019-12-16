@@ -32,7 +32,7 @@ const appRoutes: Routes = [
 
 
 
-import { OverviewItemComponent } from './content/overview/overview-item/overview-item.component';
+import { OverviewItemComponent } from './main/content/overview/overview-item/overview-item.component';
 
 import { 
   MatToolbarModule, 
