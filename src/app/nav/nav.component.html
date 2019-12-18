@@ -1,7 +1,7 @@
 <nav>
     <ul>
-        <li><a href="#"><i class="material-icons">add</i></a></li>
-        <li class="active"><a href="#"><i class="material-icons">directions_car</i></a></li>
-        <li><a href="#"><i class="material-icons">list</i></a></li>
+        <li [ngClass]="{active: currentPage == 1}" (click)="currentPage = 1"><a href="#"><i class="material-icons">add</i></a></li>
+        <li [ngClass]="{active: currentPage == 2}" (click)="currentPage = 2"><a href="#"><i class="material-icons">directions_car</i></a></li>
+        <li [ngClass]="{active: currentPage == 3}" (click)="currentPage = 3"><a href="#"><i class="material-icons">list</i></a></li>
     </ul>
 </nav>
