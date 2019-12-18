@@ -1,0 +1,88 @@
+*{
+    font-family: "roboto", sans-serif;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 95%;
+    padding: 40px;
+    background: rgba(114, 114, 114, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(177, 174, 174, 0.952);
+    border-radius: 10px;
+    overflow:scroll;
+}
+
+input:-internal-autofill-selected{
+    background: rgba(114, 114, 114, 0.8) bold !important;
+}
+
+form, form:active, form:focus {
+    color: black;
+
+}
+.form-field-date{
+    width: 100%;
+}
+hr{
+    margin: 0px;
+    margin-bottom: 10px;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+input {
+    padding: 0 10px;
+    margin: 2px;
+    height: 30px;
+    color: white;
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    background: rgba(90, 80, 80, 0.8);
+    font-size: 1.2em;
+    border: 2px solid rgba(29, 25, 25, 0.8);
+}
+textarea{
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    background: rgba(90, 80, 80, 0.8);
+    border: 2px solid rgba(29, 25, 25, 0.8);
+    font-size: 1.2em;
+    color: black;
+
+}
+select {
+    padding: 0 10px;
+    margin: 2px;
+    height: 30px;
+    color: black;
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    background: rgba(90, 80, 80, 0.8) !important;
+    font-size: 1.2em;
+    border: 2px solid rgba(29, 25, 25, 0.8); 
+}
+
+
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched
+{
+    border: 1px solid red;
+}
+
+@media(min-width: 560px){
+    .box{
+        width: 550px;
+
+    }
+
+}

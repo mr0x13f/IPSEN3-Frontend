@@ -1,9 +1,3 @@
-app-background {
-
-    position: relative;
-    
-}
-
 app-content {
 
     position: fixed;
@@ -22,14 +16,9 @@ app-content.showallpages {
 }
     
 app-menu {
-    position: fixed;
-    height: 100vh;
-    z-index: 2;
-}
 
-/* app-nav {
     position: fixed;
-    width: 100vw;
-    top: 95vh;
-    z-index: 1;
-} */
+    top: 0;
+    left: 0;
+    
+}
