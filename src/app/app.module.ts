@@ -31,6 +31,7 @@ import {
 import { ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/test.component';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { PopupComponent } from './test/popup/popup.component';
 
 
 
@@ -55,7 +56,9 @@ const material = [
     AddjourneyComponent,
     LivetrackerComponent,
     BackgroundComponent,
-    TestComponent
+    TestComponent,
+    PopupComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -69,6 +72,7 @@ const material = [
     material,
     ReactiveFormsModule
   ],
+  entryComponents: [],
   providers: [],
   bootstrap: [AppComponent]
 })

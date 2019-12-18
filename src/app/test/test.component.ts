@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 import { MatDialog } from '@angular/material';
+import { PopupComponent } from './popup/popup.component';
 
 @Component({
   selector: 'app-test',
@@ -18,7 +19,7 @@ export class TestComponent implements OnInit {
   }
 
   showPreview(){
-    
+    this.dialog.open(PopupComponent);
   }
 
   
