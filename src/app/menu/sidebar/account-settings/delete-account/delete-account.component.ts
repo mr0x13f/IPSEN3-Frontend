@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-delete-account',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delete-account.component.css']
 })
 export class DeleteAccountComponent implements OnInit {
+  
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<DeleteAccountComponent>) { }
 
   ngOnInit() {
+    
   }
+
+  closeDeleteAccountPopup(){
+    this.dialogRef.close();
+  }
+
+  
 
 }

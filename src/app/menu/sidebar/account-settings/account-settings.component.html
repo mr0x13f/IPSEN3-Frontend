@@ -1,5 +1,8 @@
 <div class="container">
-    <div class="row">        
+    <div 
+        class="row"    
+        (popupClosed)="onClosePopup()"   
+        >
         <button 
             mat-raised-button
             (click)="showChanceName()">Naam wijzigen</button>            

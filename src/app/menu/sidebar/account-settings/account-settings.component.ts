@@ -24,15 +24,14 @@ export class AccountSettingsComponent implements OnInit {
   showChanceName(){
     this.dialog.open(ChangeNameComponent);
   }
-
   showChancePassword(){
     this.dialog.open(ChangePasswordComponent);
   }
-
   showDeleteAccount(){
     this.dialog.open(DeleteAccountComponent);
   }
 
+  
 
 
 }
