@@ -1,0 +1,19 @@
+<div class="livetracker" [ngClass]="{stop: isTracking}">
+
+    <!-- Background -->
+    <svg [ngClass]="{background: true, octagon: true, active: isTracking}"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 16.971l-7.029 7.029h-9.942l-7.029-7.029v-9.942l7.029-7.029h9.942l7.029 7.029z"/></svg>
+    <svg (click)="toggleTracking()" class="background"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/></svg>
+
+    <!-- Foreground -->
+    <svg [ngClass]="{octagon: true, active: isTracking}"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 16.971l-7.029 7.029h-9.942l-7.029-7.029v-9.942l7.029-7.029h9.942l7.029 7.029z"/></svg>
+    <svg (click)="toggleTracking()"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/></svg>
+
+        
+    <label [ngClass]="{active: !isTracking}" for="">START</label>
+    <label [ngClass]="{active: isTracking}" for="">STOP</label>
+
+</div>
