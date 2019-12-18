@@ -1,0 +1,43 @@
+<ul class="container" (click)="toggle()">
+    <li class="smallview">
+        <div>{{ journey.destination }}</div>
+        <div>{{ (journey.getTotalCost()) | currency : 'EUR'}}</div>
+        <div class="checkmark fas fa-check" [ngClass]="{'is-checked': journey.isBilled}"></div>
+    </li>
+    <li class="bs-collapse collapse" [ngClass]="{'open': open}">
+        <div class="small-items">
+            <div>
+                <div class="title">Datum</div>
+                <div class="journey-data">{{ journey.date }}</div>
+            </div>
+            <div>
+                <div class="title">Kilometers</div>
+                <div class="journey-data">{{ journey.kilometers }}</div>
+            </div>
+            <div>
+                <div class="title">Project</div>
+                <div class="journey-data">{{ journey.projectId }}</div>
+            </div>
+            <div>
+                <div class="title">Voertuig</div>
+                <div class="journey-data">{{ journey.licensePlate }}</div>
+            </div>
+            <div>
+                <div class="title">Parkeerkosten</div>
+                <div class="journey-data">{{ journey.parkingCost | currency : 'EUR'}}</div>
+            </div>
+            <div>
+                <div class="title">Overige kosten</div>
+                <div class="journey-data">{{ journey.otherCost | currency : 'EUR'}}</div>
+            </div>
+            <div>
+                <div class="title">Tarief per KM</div>
+                <div class="journey-data">{{ journey.rate | currency : 'EUR'}}</div>
+            </div> 
+        </div>
+        <div class="wide-items">
+            <div class="title">Beschrijving</div>
+            <div class="journey-data">{{ journey.description }}</div>
+        </div>
+    </li>
+</ul>

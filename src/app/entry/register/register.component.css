@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+}
+
+.background1{
+    background-color: #2980b9;
+    background-image: -webkit-linear-gradient(-80deg, #2980b9 30%, #3498db 20%);
+    height: 100vh;
+    width: 100vw;
+}
+
+p{
+
+    left: calc(50% - 200px);
+    right: calc(50% - 200px);
+    position: relative;
+
+    width: 400px;
+    padding: 20px 0 10px 0;
+
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.login-form{
+    top: 25vh;
+    position: relative;
+}
+
+.name-edit, .email-edit, .password-edit, .confirm-password-edit{
+    margin-top: 10px;
+    left: calc(50% - 200px);
+    right: calc(50% - 200px);
+    position: relative;
+
+    height: 35px;
+    width: 400px;
+
+    border-style: none;
+    border-radius: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input{
+  font-size: 1.3em;
+  padding: 0 10px;
+}
+
+
+.btn{
+    margin-top: 70px;
+    left: calc(50% - 100px);
+    right: calc(50% - 100px);
+    position: relative;
+
+    width: 200px;
+    height: 50px;
+
+    font-size: 1.4em;
+    background-color: #2980b9;
+    border-style: none;
+    border-radius: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.link{
+    margin-top: 20px;
+    left: calc(50% - 100px);
+    right: calc(50% - 100px);
+    position: relative;
+
+    width: 200px;
+    text-align: center;
+
+    font-size: 1.2em;
+    font-style: none;
+    cursor: pointer;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:active{
+    color: white;
+}
