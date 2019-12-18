@@ -4,7 +4,7 @@ import { SourceListMap } from 'source-list-map';
 import { FormsModule } from '@angular/forms';
 import { WebDriverLogger } from 'blocking-proxy/built/lib/webdriver_logger';
 import { User } from '../../models/user.model';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @NgModule({
   imports:[
@@ -47,8 +47,17 @@ export class RegisterComponent implements OnInit {
       const userJSON = JSON.stringify(user);
       console.log(userJSON);
 
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      headers.append('Accept', 'application/json');
+
+
       this.http.post('http://localhost:8080/user/register',
-                       userJSON).subscribe(responseData =>{
+                       userJSON, {headers: new HttpHeaders({
+
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT'
+                       })}).subscribe(responseData =>{
                          console.log(responseData);
                        });
     // }else{
