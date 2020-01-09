@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { toBase64String } from '@angular/compiler/src/output/source_map';
 
 @Component({
   selector: 'app-livetracker',
