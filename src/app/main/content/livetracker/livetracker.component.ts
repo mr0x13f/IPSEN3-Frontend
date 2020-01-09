@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { toBase64String } from '@angular/compiler/src/output/source_map';
+import { HttpService } from 'src/services/http-service';
 
 @Component({
   selector: 'app-livetracker',
@@ -10,7 +11,9 @@ export class LivetrackerComponent implements OnInit {
 
   isTracking: boolean = false;
 
-  constructor() { }
+  constructor(
+    private httpService:HttpService
+  ) { }
 
   ngOnInit() {
   }
