@@ -6,12 +6,6 @@ import { WebDriverLogger } from 'blocking-proxy/built/lib/webdriver_logger';
 import { User } from '../../models/user.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-@NgModule({
-  imports:[
-    FormsModule
-  ]
-})
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -42,28 +36,32 @@ export class RegisterComponent implements OnInit {
 
                           
     console.log(user.email + '\t' + user.name + '\t' + user.password);
+    this.postUser(user);
   
-    // if( this.confirmPasswordInputRef.nativeElement.value === this.confirmPasswordInputRef.nativeElement.value){
-      const userJSON = JSON.stringify(user);
-      console.log(userJSON);
+    // if( password === confirmPassword){
 
-      let headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-      headers.append('Accept', 'application/json');
-
-
-      this.http.post('http://localhost:8080/user/register',
-                       userJSON, {headers: new HttpHeaders({
-
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT'
-                       })}).subscribe(responseData =>{
-                         console.log(responseData);
-                       });
+  
+      
     // }else{
     //   //todo Feedback geven
     // }
   }
 
+  postUser(user){
+    const userJSON = JSON.stringify(user);
+    console.log(userJSON);
+    //SET HEADERS
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
 
+    //POST REQUEST
+    this.http.post('http://localhost:8080/user/register',
+                       userJSON, {headers: new HttpHeaders({
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Methods': 'GET,POST'
+                       })}).subscribe(responseData =>{
+                         console.log(responseData);
+                       });
+  }
 }
