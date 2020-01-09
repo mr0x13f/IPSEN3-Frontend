@@ -2,8 +2,8 @@
     font-family: "roboto", sans-serif;
 }
 .box{
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 400px;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 90%;
