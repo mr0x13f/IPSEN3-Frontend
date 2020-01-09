@@ -73,11 +73,11 @@ export class AuthService {
 
     }
 
-    public requireLogin() {
+    // public requireLogin() {
 
-        if (!this.isLoggedIn()) this.router.navigate(["login"]);
-        return !this.isLoggedIn();
+    //     if (!this.isLoggedIn()) this.router.navigate(["login"]);
+    //     return !this.isLoggedIn();
 
-    }
+    // }
 
 }
