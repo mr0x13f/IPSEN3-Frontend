@@ -1,3 +1,4 @@
+  
 import { Injectable } from '@angular/core';
 import { map } from "rxjs/operators";
 import { HttpService } from './http.service';
@@ -14,7 +15,7 @@ export class UserService {
 
         this.httpService.get("user")
             .pipe( map( response => {
-                return <User> response;
+                return <User> response[0];
             }))
             .subscribe(next, error, complete)
 
@@ -24,7 +25,7 @@ export class UserService {
 
         this.httpService.post("user/register", registerForm)
             .pipe( map( response => {
-                return <User> response;
+                return <User> response[0];
             }))
             .subscribe(next, error, complete)
 
@@ -34,7 +35,7 @@ export class UserService {
 
         this.httpService.put("user", registerForm)
             .pipe( map( response => {
-                return <User> response;
+                return <User> response[0];
             }))
             .subscribe(next, error, complete)
 
