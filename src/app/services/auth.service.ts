@@ -62,10 +62,6 @@ export class AuthService {
         return this.user != null;
     }
 
-    public isAdmin(): boolean {
-        return this.user != null && this.user.isAdmin;
-    }
-
     public getToken(next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
 
         this.httpService.get("user/token")
