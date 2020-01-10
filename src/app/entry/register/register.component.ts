@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
 
                           
     console.log(user.email + '\t' + user.name + '\t' + user.password);
-  
+    
     if( this.confirmPasswordInputRef.nativeElement.value === this.confirmPasswordInputRef.nativeElement.value){
     }else{
       //todo Feedback geven
