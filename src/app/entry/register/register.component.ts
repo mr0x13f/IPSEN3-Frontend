@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { WebDriverLogger } from 'blocking-proxy/built/lib/webdriver_logger';
 import { User } from '../../models/user.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -19,7 +20,10 @@ export class RegisterComponent implements OnInit {
   user = new EventEmitter<User>();
 
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private userservice: UserService
+    ) { }
 
   ngOnInit() {
   }
@@ -33,35 +37,10 @@ export class RegisterComponent implements OnInit {
     const confirmPassword = this.confirmPasswordInputRef.nativeElement.value;
 
     const user = new User(email, name, password);
-
-                          
+             
     console.log(user.email + '\t' + user.name + '\t' + user.password);
-    this.postUser(user);
+    this.userservice.register
   
-    // if( password === confirmPassword){
-
-  
-      
-    // }else{
-    //   //todo Feedback geven
-    // }
   }
 
-  postUser(user){
-    const userJSON = JSON.stringify(user);
-    console.log(userJSON);
-    //SET HEADERS
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    headers.append('Accept', 'application/json');
-
-    //POST REQUEST
-    this.http.post('http://localhost:8080/user/register',
-                       userJSON, {headers: new HttpHeaders({
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Methods': 'GET,POST'
-                       })}).subscribe(responseData =>{
-                         console.log(responseData);
-                       });
-  }
 }
