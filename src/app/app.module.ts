@@ -46,6 +46,9 @@ import {
    MatCardModule
    } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestComponent } from './test/test.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { PopupComponent } from './test/popup/popup.component';
 
 
 
@@ -57,7 +60,8 @@ const material = [
   MatFormFieldModule,
   MatInputModule,
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  OverlayModule
 ];
 
 @NgModule({
@@ -69,6 +73,8 @@ const material = [
     AddjourneyComponent,
     LivetrackerComponent,
     BackgroundComponent,
+    TestComponent,
+    PopupComponent,
     OverviewItemComponent,
     EntryComponent,
     LoginComponent,
@@ -89,6 +95,7 @@ const material = [
     material,
     ReactiveFormsModule
   ],
+  entryComponents: [],
   providers: [],
   bootstrap: [AppComponent]
 })
