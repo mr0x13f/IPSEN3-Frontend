@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['../entry.component.css']
 })
 export class RegisterComponent implements OnInit {
   @ViewChild('nameInput',{static: false}) nameInputRef: ElementRef;
