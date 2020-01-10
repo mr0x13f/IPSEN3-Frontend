@@ -1,11 +1,7 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="collaps navbar-collapse navbar-center">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Invoeren</a></li>
-                <li><a href="#">Live Meting</a></li>
-                <li><a href="#">Overzicht</a></li>
-            </ul>
-        </div>
-    </div>
+<nav>
+    <ul>
+        <li [ngClass]="{active: currentPage == 1}" (click)="currentPage = 1"><a href="#"><i class="material-icons">add</i></a></li>
+        <li [ngClass]="{active: currentPage == 2}" (click)="currentPage = 2"><a href="#"><i class="material-icons">directions_car</i></a></li>
+        <li [ngClass]="{active: currentPage == 3}" (click)="currentPage = 3"><a href="#"><i class="material-icons">list</i></a></li>
+    </ul>
 </nav>

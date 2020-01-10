@@ -1,1 +1,7 @@
-<p>overview works!</p>
+<div class="container">
+    <ul class="overview-list">
+        <li class="item">
+            <app-overview-item [journey]="journey" *ngFor="let journey of journeys"></app-overview-item>  
+        </li>
+    </ul>
+</div>

@@ -26,10 +26,11 @@ const appRoutes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'main', component: MainComponent }
+  { path: 'main', component: MainComponent },
+
 ]
 
-
+import { OverviewItemComponent } from './main/content/overview/overview-item/overview-item.component';
 
 import { 
   MatToolbarModule, 
@@ -68,6 +69,7 @@ const material = [
     AddjourneyComponent,
     LivetrackerComponent,
     BackgroundComponent,
+    OverviewItemComponent,
     EntryComponent,
     LoginComponent,
     RegisterComponent,

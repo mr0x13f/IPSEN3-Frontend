@@ -1,0 +1,85 @@
+
+.container {
+    position: relative;
+    width: 100%;
+    color: white;
+    background-color: rgba(60, 60, 60, 0.5);
+    padding: 3px 0px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-family: "roboto", sans-serif;
+    font-size: 1.4em;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(80, 80, 80);
+}
+
+.sum {
+    font-weight: bold;
+}
+
+.container:hover {
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+.checkmark {
+    background-color: #8E8E8E;
+    position: relative;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 23px;
+    color: white;
+    border-radius: 100%;
+}
+
+.collapse {
+    display: none;
+}
+
+.collapse.open {
+    display: contents;
+    margin-top: 5px;
+}
+
+.checkmark.is-checked {
+    background-color: #00C400;
+}
+
+.title {
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+.journey-data {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.smallview, .collapse.open {
+    padding: 2px 5px;
+}
+
+.smallview {
+    display: grid;
+    grid-template-columns: 2fr 1fr 24px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.small-items {
+    padding: 0px 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 7px;
+}
+
+.wide-items {
+    padding: 7px 5px 10px 5px;
+}

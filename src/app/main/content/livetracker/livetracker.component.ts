@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { toBase64String } from '@angular/compiler/src/output/source_map';
+import { HttpService } from 'src/app/services/http.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-livetracker',
@@ -9,7 +12,9 @@ export class LivetrackerComponent implements OnInit {
 
   isTracking: boolean = false;
 
-  constructor() { }
+  constructor(
+    private authService:AuthService
+  ) { }
 
   ngOnInit() {
   }
@@ -25,11 +30,11 @@ export class LivetrackerComponent implements OnInit {
   }
 
   startTracking() {
-    // start tracking
+  
   }
 
   stopTracking() {
-    // stop tracking
+
   }
 
 }

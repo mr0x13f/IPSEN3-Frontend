@@ -5,9 +5,22 @@ div.livetracker {
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-    width: 300px;
-    height: 300px;
-    z-index: 1;
+    width: 200px;
+    height: 200px;
+
+    /* Palette */
+    --border-color: #007BD3;
+    --main-color: #0094FF;
+    --hover-color: #2BAAFF;
+
+}
+
+div.livetracker.stop {
+
+    /* Palette */
+    --border-color: rgb(179, 0, 0);
+    --main-color: rgb(255, 0, 0);
+    --hover-color: #ff4444;
 
 }
 
@@ -21,7 +34,7 @@ div.livetracker label {
 
     /* Appearance */
     color: #fff;
-    font-size: 5em;
+    font-size: 3.5em;
     text-align: center;
     line-height: 1em;
     pointer-events: none;
@@ -29,7 +42,7 @@ div.livetracker label {
     opacity: 0%;
 
     /* Animation */
-    transition: opacity 0.1s;
+    transition: opacity 0.3s;
 
 }
 
@@ -50,7 +63,7 @@ div.livetracker svg {
     height: 90%;
 
     /* Appearance */
-    fill: #0094FF;
+    fill: var(--main-color);
     cursor: pointer;
 
     /* Animation */
@@ -60,7 +73,7 @@ div.livetracker svg {
 
 div.livetracker:hover svg {
 
-    fill: #2BAAFF;
+    fill: var(--hover-color);
 
 }
 
@@ -71,7 +84,7 @@ div.livetracker svg.background {
     height: 100%;
 
     /* Appearance */
-    fill: #007BD3;
+    fill: var(--border-color);
 
 }
 
@@ -83,7 +96,7 @@ div.livetracker svg.octagon {
     height: 80%;
 
     /* Animation */
-    transition: width 0.2s, height 0.2s, fill 0.3s;
+    transition: width 0.5s, height 0.5s, fill 0.3s;
 
 }
 
