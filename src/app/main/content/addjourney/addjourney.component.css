@@ -2,6 +2,21 @@
     font-family: "roboto", sans-serif;
 }
 .box{
+    position: relative;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 95%;
+    padding: 40px;
+    background: rgba(114, 114, 114, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(177, 174, 174, 0.952);
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+/* .box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -14,7 +29,7 @@
     box-shadow: 0 15px 25px rgba(177, 174, 174, 0.952);
     border-radius: 10px;
     overflow:scroll;
-}
+} */
 
 input:-internal-autofill-selected{
     background: rgba(114, 114, 114, 0.8) bold !important;
@@ -38,13 +53,14 @@ input {
     padding: 0 10px;
     margin: 2px;
     height: 30px;
-    color: white;
+    color: black;
     position: relative;
     width: 100%;
     border-radius: 15px;
     background: rgba(90, 80, 80, 0.8);
     font-size: 1.2em;
     border: 2px solid rgba(29, 25, 25, 0.8);
+    color: black;
 }
 textarea{
     display: block;
