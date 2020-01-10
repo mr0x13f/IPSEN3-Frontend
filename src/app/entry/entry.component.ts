@@ -9,8 +9,8 @@ import { RegisterComponent } from './register/register.component';
 })
 export class EntryComponent implements OnInit {
 
-ngOnInit(){
-  
-}
+  ngOnInit(){
+    
+  }
 
 }
