@@ -3,12 +3,11 @@
     width: 100%;
     color: white;
     background-color: rgba(60, 60, 60, 0.5);
-    padding: 3px 0px;
+    padding: 3px 2px;
     margin: 0;
-    padding: 0;
     display: inline-block;
     font-family: "roboto", sans-serif;
-    font-size: 1.4em;
+    font-size: 1.6em;
     list-style-type: none;
     border-bottom: 1px solid rgba(80, 80, 80);
 }
