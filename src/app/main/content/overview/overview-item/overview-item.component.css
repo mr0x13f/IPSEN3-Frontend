@@ -81,3 +81,13 @@
 .wide-items {
     padding: 7px 5px 10px 5px;
 }
+
+.delete-button {
+    font-size: 0.8em;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin: 7px;
+    padding: 3px 20px;
+}

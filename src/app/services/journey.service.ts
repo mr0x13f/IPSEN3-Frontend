@@ -12,11 +12,19 @@ export class JourneyService {
 
     public getJourneys(completed) {
 
-      this.httpService.get("journeys")
+      this.httpService.get("journey")
       .pipe(map(response => {
         return <Journey[]> response;
       }))
       .subscribe(completed);
 
     }
+
+    
+
+    public getTotalCost(journey:Journey): number {
+
+      return journey.kilometers * journey.rate + journey.parkingCost + journey.otherCost;
+
+  }
 }

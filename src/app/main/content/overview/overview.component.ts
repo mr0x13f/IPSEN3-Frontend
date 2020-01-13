@@ -3,6 +3,7 @@ import { Journey } from "../../../models/journey.model";
 import { HttpService } from 'src/app/services/http.service';
 import { map } from 'rxjs/internal/operators/map';
 import { JourneyService } from 'src/app/services/journey.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -16,18 +17,22 @@ export class OverviewComponent implements OnInit {
 
   constructor(
     private httpService:HttpService,
-    private journeyService:JourneyService
+    private journeyService:JourneyService,
+    private authService:AuthService
   ) { }
 
   ngOnInit() {
 
+    this.authService.login("nigerfagoot@gmail.com", "wachtwoord", () => {this.getJourneys();})
 
+  }
+
+  getJourneys() {
     let completed = (journeys) => {
       this.journeys = journeys;
     };
 
     this.journeyService.getJourneys(completed);
-
   }
 
   // journeys: Journey[] = [
