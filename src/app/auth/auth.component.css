@@ -13,7 +13,7 @@
     width: 100vw;
 }
 
-.login-form{
+form{
     top: 30vh;
     position: relative;
 
@@ -48,7 +48,7 @@ input{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.btn{
+button{
     margin-top: 70px;
     left: calc(50% - 100px);
     right: calc(50% - 100px);
@@ -64,6 +64,10 @@ input{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     cursor: pointer;
+}
+
+button:disabled, button[disabled]:hover{
+    background-color: #bbb;
 }
 
 .link{
@@ -88,4 +92,22 @@ a{
 
 a:active{
     color: white;
+}
+
+.spinner{
+    left: calc(50% - 100px);
+    right: calc(50% - 100px);
+    position: relative;
+}
+
+.alert{
+    margin-top: 175px;
+    left: calc(50% - 200px);
+    right: calc(50% - 200px);
+    position: absolute;
+
+    font-size: 1.2em;
+    text-align: center;
+
+    width: 400px;
 }
