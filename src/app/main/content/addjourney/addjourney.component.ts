@@ -16,7 +16,6 @@ import { getLocaleDateTimeFormat, DatePipe } from '@angular/common';
 
 export class AddjourneyComponent implements OnInit {
   projectForm: FormGroup; 
-  journey:Journey = new Journey();
   responseStatus:Object= [];
   status:boolean ;
   
