@@ -16,11 +16,11 @@ export class AddjourneyComponent implements OnInit {
 
   ngOnInit() {
     this.projectForm = new FormGroup({
-      'kilometers' : new FormControl(null, [Validators.required, CustomValidators.invalidNumeric]),
+      'kilometers' : new FormControl(null, [Validators.required]),
       'date' : new FormControl(null, Validators.required),
-      'rate' : new FormControl(null, [Validators.required, CustomValidators.invalidNumeric]),
-      'parkcosts' : new FormControl(null, CustomValidators.invalidNumeric),
-      'othercosts' : new FormControl(null, CustomValidators.invalidNumeric),
+      'rate' : new FormControl(null, [Validators.required]),
+      'parkcosts' : new FormControl(null),
+      'othercosts' : new FormControl(null),
       'destiny' : new FormControl(null, Validators.required),
       'project' : new FormControl(null, Validators.required),
       'licenseplate' : new FormControl(null, Validators.required),
