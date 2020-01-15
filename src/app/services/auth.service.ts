@@ -46,15 +46,10 @@ export class AuthService {
 
     public clearAuth() {
 
+        //this.user.next(null) maybe?
         this.user = null;
         this.token = null;
         this.httpService.headers = this.httpService.headers.delete("Authorization");
-
-    }
-
-    public logout(): void {
-
-        this.clearAuth();
 
     }
 

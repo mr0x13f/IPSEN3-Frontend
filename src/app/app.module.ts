@@ -12,23 +12,14 @@ import { AddjourneyComponent } from './main/content/addjourney/addjourney.compon
 import { LivetrackerComponent } from './main/content/livetracker/livetracker.component';
 import { BackgroundComponent } from './main/background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EntryComponent } from './entry/entry.component';
-import { LoginComponent } from './entry/login/login.component';
-import { RegisterComponent } from './entry/register/register.component';
-import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { FormsModule } from '@angular/forms';
 import { MenuModule } from './main/menu/menu.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from "@angular/common";
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
-const appRoutes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'main', component: MainComponent },
 
-]
 
 import { OverviewItemComponent } from './main/content/overview/overview-item/overview-item.component';
 
@@ -49,6 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/test.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { PopupComponent } from './test/popup/popup.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 
@@ -76,16 +68,14 @@ const material = [
     TestComponent,
     PopupComponent,
     OverviewItemComponent,
-    EntryComponent,
-    LoginComponent,
-    RegisterComponent,
-    MainComponent
+    MainComponent,
+    AuthComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes),
     MenuModule,
     BrowserAnimationsModule,
     material,
