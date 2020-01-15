@@ -18,31 +18,22 @@ import { MenuModule } from './main/menu/menu.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from "@angular/common";
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
-
-
-
 import { OverviewItemComponent } from './main/content/overview/overview-item/overview-item.component';
-
-import { 
-  MatToolbarModule, 
-  MatSidenavModule 
-} from '@angular/material';
-
-import {
-   MatNativeDateModule, 
-   MatDatepickerModule, 
-   MatFormFieldModule, 
-   MatInputModule,
-   MatButtonModule,
-   MatCardModule
-   } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/test.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { PopupComponent } from './test/popup/popup.component';
 import { AuthComponent } from './auth/auth.component';
-
-
+import {
+  MatToolbarModule,
+MatSidenavModule,
+  MatNativeDateModule, 
+  MatDatepickerModule, 
+  MatFormFieldModule, 
+  MatInputModule,
+  MatButtonModule,
+  MatCardModule
+} from '@angular/material';
 
 const material = [
   MatToolbarModule,
