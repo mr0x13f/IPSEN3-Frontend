@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './main/menu/menu.component';
@@ -17,29 +16,24 @@ import { MainComponent } from './main/main.component';
 import { FormsModule } from '@angular/forms';
 import { MenuModule } from './main/menu/menu.module';
 import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from "@angular/common";
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
-
-
-
 import { OverviewItemComponent } from './main/content/overview/overview-item/overview-item.component';
-
-import { 
-  MatToolbarModule, 
-  MatSidenavModule 
-} from '@angular/material';
-
-import {
-   MatNativeDateModule, 
-   MatDatepickerModule, 
-   MatFormFieldModule, 
-   MatInputModule,
-   MatButtonModule,
-   MatCardModule
-   } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestComponent } from './test/test.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { PopupComponent } from './test/popup/popup.component';
 import { AuthComponent } from './auth/auth.component';
-
-
+import {
+  MatToolbarModule,
+MatSidenavModule,
+  MatNativeDateModule, 
+  MatDatepickerModule, 
+  MatFormFieldModule, 
+  MatInputModule,
+  MatButtonModule,
+  MatCardModule
+} from '@angular/material';
 
 const material = [
   MatToolbarModule,
@@ -49,7 +43,8 @@ const material = [
   MatFormFieldModule,
   MatInputModule,
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  OverlayModule
 ];
 
 @NgModule({
@@ -61,6 +56,8 @@ const material = [
     AddjourneyComponent,
     LivetrackerComponent,
     BackgroundComponent,
+    TestComponent,
+    PopupComponent,
     OverviewItemComponent,
     MainComponent,
     AuthComponent,
@@ -79,7 +76,10 @@ const material = [
     material,
     ReactiveFormsModule
   ],
-  providers: [],
+  entryComponents: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

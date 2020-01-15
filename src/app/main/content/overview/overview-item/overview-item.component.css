@@ -1,15 +1,13 @@
-
 .container {
     position: relative;
     width: 100%;
     color: white;
     background-color: rgba(60, 60, 60, 0.5);
-    padding: 3px 0px;
+    padding: 3px 2px;
     margin: 0;
-    padding: 0;
     display: inline-block;
     font-family: "roboto", sans-serif;
-    font-size: 1.4em;
+    font-size: 1.6em;
     list-style-type: none;
     border-bottom: 1px solid rgba(80, 80, 80);
 }
@@ -82,4 +80,14 @@
 
 .wide-items {
     padding: 7px 5px 10px 5px;
+}
+
+.delete-button {
+    font-size: 0.8em;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin: 7px;
+    padding: 3px 20px;
 }

@@ -1,7 +1,4 @@
-
-
-
-<form autocomplete="off" [formGroup]="projectForm" (ngSubmit)="onSaveJourney()">
+<form autocomplete="off" [formGroup]="projectForm" (ngSubmit)="onSaveJourney(projectForm.value)">
     <div class="box">
         <label class="special-span">Alle velden met een * zijn verplicht
 
@@ -18,7 +15,8 @@
                             type="text"
                             matInput placeholder="00"
                             formControlName="kilometers"
-                            autocomplete="off">
+                            autocomplete="off"
+                            >
                     </div>
                 </div>
             <div class="col-xs-6">
@@ -27,10 +25,10 @@
                     <mat-form-field class="form-field-date">
                         <input 
                             style="position: absolute; top: -17px; left: 0px; font-size: 11px;" 
-                            
                             formControlName="date" 
                             matInput [matDatepicker]="myDatepicker"
-                            autocomplete="off">
+                            autocomplete="off"
+                            >
                         <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
                         <mat-datepicker #myDatepicker></mat-datepicker>
                     </mat-form-field>
@@ -50,8 +48,8 @@
                         class="input-text"
                         matInput placeholder="0.00"
                         id="rateperkm"
-                        
-                        autocomplete="off">         
+                        autocomplete="off"
+                        >         
                 </div>
             </div>
         </div>
@@ -64,12 +62,13 @@
                         <div class="form-group">
                             <label for="parkingcosts">Parkeer kosten</label>
                             <input 
-                                formControlName="parkcosts"
+                                formControlName="parkingCost"
                                 type="text"
                                 class="input-text"
                                 matInput placeholder="0.00"
                                 id="parkingcosts"
-                                autocomplete="off">
+                                autocomplete="off"
+                                >
                         </div>
                     </div>
             
@@ -77,12 +76,13 @@
                         <div class="form-group">
                             <label for="othercosts">Overige kosten</label>
                             <input 
-                                formControlName="othercosts"
+                                formControlName="otherCost"
                                 type="text"
                                 class="input-text"
                                 matInput placeholder="0.00"
                                 id="othercosts"
-                                autocomplete="off">
+                                autocomplete="off"
+                                >
                         </div>
                     </div>
                 </div>
@@ -92,34 +92,37 @@
         <hr>
 
         <div class="form-group">
-            <label for="destiny">Bestemming*</label>
+            <label for="destination">Bestemming*</label>
             <input 
-                formControlName="destiny"
+                formControlName="destination"
                 type="text"
                 class="input-text"
                 matInput placeholder="bijv: Amsterdam"
-                id="destiny"
-                autocomplete="off">
+                id="destination"
+                autocomplete="off"
+                >
         </div>
 
         <div class="form-group">
             <label for="project">Project*</label>
             <select 
-                formControlName="project"
-                id="project">
-                <option value="stinky">stinky</option>
+                formControlName="projectId"
+                id="project"
+                >
+                <option value="a19fbbf0-9ac3-4d92-8109-904d0e5fcba9">a19fbbf0-9ac3-4d92-8109-904d0e5fcba9</option>
             </select>
         </div>
         
         <div class="form-group">
             <label for="license">Kenteken*</label>
             <input 
-                formControlName="licenseplate"
+                formControlName="licensePlate"
                 type="text"
                 id="license"
                 class="input-text"
                 matInput placeholder="00-00-00"
-                autocomplete="off">
+                autocomplete="off"
+                >                
         </div>
 
         <div class="form-group">
@@ -130,7 +133,8 @@
                 id="description"
                 rows="4"
                 class="textarea-text"
-                autocomplete="off"></textarea>
+                autocomplete="off"
+                ></textarea>
         </div>
         <button 
             class="btn btn-success" 
