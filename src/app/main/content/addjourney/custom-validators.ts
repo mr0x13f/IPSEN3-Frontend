@@ -8,16 +8,16 @@ export class CustomValidators{
 
   static invalidNumeric(control: AbstractControl) {
 
-    let val = control.value;
+    // let val = control.value;
 
 
-    if (val === null || val === '') return null;
+    // if (val == null || val == '') return null;
 
 
-    if (!val.toString().match(/^[0-9]+(.?[0-9]+)?$/)) return { 'invalidNumber': true };
+    // if (!val.toString().match(/^[0-9]+(.?[0-9]+)?$/)) return { 'invalidNumber': true };
 
 
-    return null;
+    // return null;
 
   }
 

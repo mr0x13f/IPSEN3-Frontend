@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './main/menu/menu.component';
@@ -21,6 +20,7 @@ import { MainComponent } from './main/main.component';
 import { FormsModule } from '@angular/forms';
 import { MenuModule } from './main/menu/menu.module';
 import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from "@angular/common";
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -46,6 +46,9 @@ import {
    MatCardModule
    } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestComponent } from './test/test.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { PopupComponent } from './test/popup/popup.component';
 
 
 
@@ -57,7 +60,8 @@ const material = [
   MatFormFieldModule,
   MatInputModule,
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  OverlayModule
 ];
 
 @NgModule({
@@ -69,6 +73,8 @@ const material = [
     AddjourneyComponent,
     LivetrackerComponent,
     BackgroundComponent,
+    TestComponent,
+    PopupComponent,
     OverviewItemComponent,
     EntryComponent,
     LoginComponent,
@@ -89,7 +95,10 @@ const material = [
     material,
     ReactiveFormsModule
   ],
-  providers: [],
+  entryComponents: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
