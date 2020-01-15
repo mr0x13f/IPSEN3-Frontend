@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { toBase64String } from '@angular/compiler/src/output/source_map';
+import { HttpService } from 'src/app/services/http.service';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
