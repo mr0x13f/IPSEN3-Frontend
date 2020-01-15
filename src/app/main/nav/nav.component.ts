@@ -22,12 +22,4 @@ export class NavComponent implements OnInit {
     this.authService.clearAuth();
     this.router.navigate(['/auth'])
   }
-
-  //delete this
-  private printUser(){
-    console.log(this.authService.user.email);
-    console.log(this.authService.user.name);
-    console.log(this.authService.user.password);
-    console.log(this.authService.token);
-  }
 }

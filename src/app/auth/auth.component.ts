@@ -16,7 +16,7 @@ export class AuthComponent {
   isLoading = false;
   error: string = null;
 
-  constructor(private userService: UserService, 
+  constructor(private userService: UserService,
     private authService: AuthService,
     private router: Router) { }
 
@@ -56,7 +56,7 @@ export class AuthComponent {
       }
     }
 
-    form.reset()
+    form.reset();
     this.isLoading = false;
 
 
