@@ -102,3 +102,7 @@
     font-size: 0.8em;
     font-style: italic;
 }
+
+.wide-items, .small-items{
+    pointer-events: none;
+}

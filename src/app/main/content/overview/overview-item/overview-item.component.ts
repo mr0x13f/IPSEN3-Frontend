@@ -17,12 +17,18 @@ export class OverviewItemComponent implements OnInit {
   ) { }
 
   toggle() {
-    // console.log((<Element>event.target).className)
+    if((<Element>event.target).className === 'container'){
+      return
+    }
     this.open = !this.open;
   }
 
   confirm() {
     this.confirmOpen = !this.confirmOpen;
+  }
+
+  verwijderRit(){
+    console.log('Verwijder rit!')
   }
 
   ngOnInit() {
