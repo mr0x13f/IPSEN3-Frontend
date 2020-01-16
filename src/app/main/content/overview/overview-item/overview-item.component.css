@@ -42,6 +42,11 @@
     margin-top: 5px;
 }
 
+.collapse.confirm {
+    display: contents;
+    margin-top: 5px;
+}
+
 .checkmark.is-checked {
     background-color: #00C400;
 }
