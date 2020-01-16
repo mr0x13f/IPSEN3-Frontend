@@ -48,7 +48,6 @@ export class AuthService {
     success?: () => void,
     error?: (error: any) => void
   ) {
-    console.log('validating token')
     this.httpService.headers = this.httpService.headers.set(
       "Authorization",
       "Bearer " + token
@@ -69,7 +68,6 @@ export class AuthService {
   }
 
   private localStoreAuthData(token: string) {
-    console.log(token);
     localStorage.setItem("token", JSON.stringify(token));
   }
 
@@ -78,24 +76,19 @@ export class AuthService {
     if (!loadedToken) {
       return;
     }
-    console.log("AUTOLOGIN: LOADED TOKEN:");
-    console.log(loadedToken);
     this.validateToken(
       loadedToken,
       () => {
-        console.log("validate token succes");
         this.token = loadedToken;
         this.getUserFromDatabase();
         this.router.navigate(["main"]);
       },
       err => {
-        console.log("validate token not a succes");
       }
     );
   }
 
   private getUserFromDatabase() {
-    console.log("get user from db");
     this.httpService.get("user").pipe(
       tap((receivedData: User) => console.log(receivedData)),
       map((receivedData: User) => {
@@ -106,7 +99,6 @@ export class AuthService {
         );
       })
     );
-    console.log(this.user.email);
   }
 
   public clearAuth() {

@@ -20,6 +20,10 @@ export class OverviewItemComponent implements OnInit {
     if((<Element>event.target).className === 'container'){
       return
     }
+    if( (<Element>event.target).className ==='delete-button'){
+      return
+    }
+    console.log((<Element>event.target).className)
     this.open = !this.open;
   }
 
