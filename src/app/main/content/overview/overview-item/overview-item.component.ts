@@ -17,6 +17,7 @@ export class OverviewItemComponent implements OnInit {
   ) { }
 
   toggle() {
+    // console.log((<Element>event.target).className)
     this.open = !this.open;
   }
 

@@ -1,4 +1,4 @@
-<ul class="container" (click)="toggle()">
+<ul class="container" (click)="toggle(event)">
     <li class="smallview">
         <div>{{ journey.destination }}</div>
         <div>{{ (journeyService.getTotalCost(journey)) | currency : 'EUR'}}</div>
