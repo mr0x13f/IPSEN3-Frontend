@@ -8,8 +8,7 @@ nav {
     height: 40px;
 
     /* Appearance */
-    background-color: #1A71CE;
-    border-color: #155CA8;
+    background-color: var(--color-primary);
     border-radius: 0;
     
 }
@@ -39,16 +38,16 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color: rgb(78, 140, 206);
+    background-color: var(--color-secondary);
 }
 
 nav ul li.active {
-    background-color: #fff;
+    background-color: var(--color-text-secondary);
 }
 
 nav ul li a {
 
-    color: #fff;
+    color: var(--color-text-secondary);
     display: block;
     width: 100%;
     height: 100%;
@@ -56,7 +55,7 @@ nav ul li a {
 }
 
 nav ul li.active a {
-    color: #1A71CE;
+    color: var(--color-tertairy);
 }
 
 nav ul li a i {
@@ -70,11 +69,11 @@ nav ul li a i {
     position: relative;
     float: right;
     display: block;
-    background-color: #155CA8;
+    background-color: transparent;
     padding: 12px;
-    color: white;
+    color: var(--color-text-secondary);
 }
 
 #logout:hover{
-    background-color: #1A71CE;
+    background-color: var(--color-secondary);
 }

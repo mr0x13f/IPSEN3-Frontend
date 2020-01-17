@@ -3,6 +3,7 @@
 :root {
 
     --color-background-light: #fff;
+    --color-background-medium: #e0e0e0;
     --color-background-dark: #ebedee;
     --color-text-primary: #34495e;
     --color-text-secondary: #fff;
@@ -10,6 +11,12 @@
     --color-primary: #1abc9c;
     --color-secondary: #159B81;
     --color-tertairy: #009373;
+    --color-checkmark-true: #00C400;
+    --color-checkmark-false: #8E8E8E;
+    --color-accent-primary: #FF4500;
+    --color-accent-secondary: #d83a01;
+    --color-accent-tertairy: #8f2701;
+    
 
 }
 
