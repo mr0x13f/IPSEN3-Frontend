@@ -91,3 +91,9 @@
     margin: 7px;
     padding: 3px 20px;
 }
+
+.confirm-text {
+    display: none;
+    font-size: 0.8em;
+    font-style: italic;
+}
