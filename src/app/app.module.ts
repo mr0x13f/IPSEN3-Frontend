@@ -1,5 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { MenuModule } from './main/menu/menu.module';
+import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from "@angular/common";
+import { FormsModule } from '@angular/forms';
+import {
+  MatToolbarModule,
+  MatSidenavModule,
+  MatNativeDateModule, 
+  MatDatepickerModule, 
+  MatFormFieldModule, 
+  MatInputModule,
+  MatButtonModule,
+  MatCardModule
+} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,27 +29,9 @@ import { LivetrackerComponent } from './main/content/livetracker/livetracker.com
 import { BackgroundComponent } from './main/background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './main/main.component';
-import { FormsModule } from '@angular/forms';
-import { MenuModule } from './main/menu/menu.module';
-import { HttpClientModule } from '@angular/common/http';
-import { DatePipe } from "@angular/common";
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { OverviewItemComponent } from './main/content/overview/overview-item/overview-item.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { TestComponent } from './test/test.component';
-import { OverlayModule } from '@angular/cdk/overlay';
-import { PopupComponent } from './test/popup/popup.component';
 import { AuthComponent } from './auth/auth.component';
-import {
-  MatToolbarModule,
-MatSidenavModule,
-  MatNativeDateModule, 
-  MatDatepickerModule, 
-  MatFormFieldModule, 
-  MatInputModule,
-  MatButtonModule,
-  MatCardModule
-} from '@angular/material';
 
 const material = [
   MatToolbarModule,
@@ -56,8 +54,6 @@ const material = [
     AddjourneyComponent,
     LivetrackerComponent,
     BackgroundComponent,
-    TestComponent,
-    PopupComponent,
     OverviewItemComponent,
     MainComponent,
     AuthComponent,
