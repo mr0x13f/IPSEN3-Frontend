@@ -136,9 +136,11 @@
                 autocomplete="off"
                 ></textarea>
         </div>
-        <button 
+        <button class="submit-button" type="submit" [disabled]="!projectForm.valid">Rit Opslaan</button>
+
+        <!-- <button 
             class="btn btn-success" 
             type="submit"
-            [disabled]="!projectForm.valid">Opslaan</button>
+            [disabled]="!projectForm.valid">Opslaan</button> -->
     </div>
     </form>

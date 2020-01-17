@@ -1,9 +1,10 @@
 *{
     font-family: "roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 }
 .box{
     position: relative;
-    /* transform: translate(-50%, -50%); */
     height: 90%;
     width: 90%;
     max-width: 800px;
@@ -11,19 +12,16 @@
     margin: auto;
     background: var(--color-background-dark);
     box-sizing: border-box;
-    /*box-shadow: 0 15px 25px rgba(177, 174, 174, 0.952);*/
     border-radius: 10px;
     overflow:scroll;
 } 
 
 input:-internal-autofill-selected{
-    background: var(--color-text-tertairy) bold !important;
+    background: var(--color-text-tertairy) !important;
 }
 
 form, form:active, form:focus {
     color: var(--color-text-primary);
-    font-size: 1.2em;
-
 }
 .form-field-date{
     width: 100%;
@@ -45,7 +43,6 @@ input {
     border-radius: 15px;
     background: var(--color-background-light);
     font-size: 1.2em;
-    /* border: 1px solid var(--color-primary); */
 }
 textarea{
     display: block;
@@ -53,7 +50,6 @@ textarea{
     width: 100%;
     border-radius: 15px;
     background: var(--color-background-light);
-    /* border: 1px solid var(--color-primary); */
     border: none;
     font-size: 1.2em;
     color: var(--color-text-tertairy);
@@ -70,10 +66,17 @@ select {
     border-radius: 15px;
     background: var(--color-background-light) !important;
     font-size: 1.2em;
-    /* border: 1px solid var(--color-primary);  */
 }
 
-
+.submit-button {
+    font-size: 1.2em;
+    background-color: var(--color-primary);
+    color: var(--color-text-secondary);
+    border: none;
+    border-radius: 20px;
+    margin: 7px;
+    padding: 3px 20px;
+}
 
 input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched,
