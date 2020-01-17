@@ -80,8 +80,8 @@
 
 .delete-button {
     font-size: 0.8em;
-    background-color: orangered;
-    color: white;
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-secondary);
     border: none;
     border-radius: 20px;
     margin: 7px;
