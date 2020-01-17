@@ -14,7 +14,8 @@ import {
   MatFormFieldModule, 
   MatInputModule,
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  MatIconModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,8 @@ import { MainComponent } from './main/main.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { OverviewItemComponent } from './main/content/overview/overview-item/overview-item.component';
 import { AuthComponent } from './auth/auth.component';
+import { HeaderComponent } from './main/header/header.component';
+import { Menu3Component } from './main/header/menu3/menu3.component';
 
 const material = [
   MatToolbarModule,
@@ -42,7 +45,8 @@ const material = [
   MatInputModule,
   MatButtonModule,
   MatCardModule,
-  OverlayModule
+  OverlayModule,
+  MatIconModule
 ];
 
 @NgModule({
@@ -57,7 +61,9 @@ const material = [
     OverviewItemComponent,
     MainComponent,
     AuthComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    Menu3Component,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

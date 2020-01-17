@@ -5,5 +5,6 @@
 <!-- <app-background></app-background> -->
 
 <app-background [contentLeftPos]="content.offsetLeft"></app-background>
+<app-header></app-header>
 <app-content #content [ngStyle]="{left: (nav.currentPage*-100+100)+'vw'}"></app-content>
 <app-nav #nav></app-nav>
