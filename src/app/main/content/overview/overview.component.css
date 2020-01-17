@@ -1,5 +1,13 @@
+img {
+    background-color: var(--color-background-dark);
+    display: block;
+    position: relative;
+    padding: 30px auto;
+    margin: 0 auto 10px auto;
+}
+
 .container {
-    background-color: rgba(30, 30, 30, 0.5);
+    background-color: var(--color-background-dark);
     box-sizing: border-box;
     margin: auto;
     margin-bottom: 10px;

@@ -1,27 +1,23 @@
 .container {
     position: relative;
     width: 100%;
-    color: white;
-    background-color: rgba(60, 60, 60, 0.5);
+    color: var(--color-text-primary);
+    background-color: var(--color-background-dark);
     padding: 3px 2px;
     margin: 0;
     display: inline-block;
     font-family: "roboto", sans-serif;
     font-size: 1.6em;
     list-style-type: none;
-    border-bottom: 1px solid rgba(80, 80, 80);
+    border-bottom: 1px solid var(--color-background-light);
 }
 
 .sum {
     font-weight: bold;
 }
 
-.container:hover {
-    background-color: rgba(40, 40, 40, 0.5);
-}
-
 .checkmark {
-    background-color: #8E8E8E;
+    background-color: var(--color-checkmark-false);
     position: relative;
     font-size: 14px;
     display: flex;
@@ -29,7 +25,7 @@
     align-items: center;
     width: 23px;
     height: 23px;
-    color: white;
+    color: var(--color-text-secondary);
     border-radius: 100%;
 }
 
@@ -43,7 +39,7 @@
 }
 
 .checkmark.is-checked {
-    background-color: #00C400;
+    background-color: var(--color-checkmark-true);
 }
 
 .title {
@@ -96,4 +92,10 @@
     display: none;
     font-size: 0.8em;
     font-style: italic;
+}
+
+@media screen and (min-width: 800px) {
+    .container:hover {
+        background-color: var(--color-background-medium);
+    }
 }
