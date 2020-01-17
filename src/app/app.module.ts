@@ -1,6 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { MenuModule } from './main/menu/menu.module';
+import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from "@angular/common";
+import { FormsModule } from '@angular/forms';
+import {
+  MatToolbarModule,
+  MatSidenavModule,
+  MatNativeDateModule, 
+  MatDatepickerModule, 
+  MatFormFieldModule, 
+  MatInputModule,
+  MatButtonModule,
+  MatCardModule
+} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,32 +26,10 @@ import { AddjourneyComponent } from './main/content/addjourney/addjourney.compon
 import { LivetrackerComponent } from './main/content/livetracker/livetracker.component';
 import { BackgroundComponent } from './main/background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EntryComponent } from './entry/entry.component';
-import { LoginComponent } from './entry/login/login.component';
-import { RegisterComponent } from './entry/register/register.component';
 import { MainComponent } from './main/main.component';
-import { FormsModule } from '@angular/forms';
-import { MenuModule } from './main/menu/menu.module';
-import { HttpClientModule } from '@angular/common/http';
-
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { OverviewItemComponent } from './main/content/overview/overview-item/overview-item.component';
-
-import { 
-  MatToolbarModule, 
-  MatSidenavModule 
-} from '@angular/material';
-
-import {
-   MatNativeDateModule, 
-   MatDatepickerModule, 
-   MatFormFieldModule, 
-   MatInputModule,
-   MatButtonModule,
-   MatCardModule
-   } from '@angular/material';
-import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { AuthComponent } from './auth/auth.component';
 
 const material = [
   MatToolbarModule,
@@ -46,7 +39,8 @@ const material = [
   MatFormFieldModule,
   MatInputModule,
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  OverlayModule
 ];
 
 @NgModule({
@@ -59,10 +53,9 @@ const material = [
     LivetrackerComponent,
     BackgroundComponent,
     OverviewItemComponent,
-    EntryComponent,
-    LoginComponent,
-    RegisterComponent,
-    MainComponent
+    MainComponent,
+    AuthComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +70,10 @@ const material = [
     material,
     ReactiveFormsModule
   ],
-  providers: [],
+  entryComponents: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,6 +13,12 @@ import {
     MatExpansionModule,
     MatButtonModule
   } from '@angular/material';
+
+
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { DeleteAccountComponent } from './account-settings/delete-account/delete-account.component';
+import { ChangePasswordComponent } from './account-settings/change-password/change-password.component';
+import { ChangeNameComponent } from './account-settings/change-name/change-name.component';
   
   const material = [
     MatToolbarModule,
@@ -27,7 +33,12 @@ import {
       MenuComponent,
       SidebarComponent,
       ProjectsComponent,
-      CompaniesComponent
+      CompaniesComponent,
+      AccountSettingsComponent,
+      DeleteAccountComponent,
+      ChangePasswordComponent,
+      ChangeNameComponent
+      
     ],
     imports: [
       material
@@ -36,6 +47,7 @@ import {
         MenuComponent,
         SidebarComponent
     ],
+    entryComponents: [DeleteAccountComponent, ChangeNameComponent, ChangePasswordComponent],
     providers: [],
     bootstrap: []
   })

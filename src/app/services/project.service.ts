@@ -11,7 +11,7 @@ export class ProjectService {
 
     public listProjects(next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
 
-        this.httpService.get("projects")
+        this.httpService.get("project")
             .pipe( map( response => {
                 return <Project[]> response;
             }))
@@ -21,7 +21,7 @@ export class ProjectService {
 
     public getProjectById(projectId:string, next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
 
-        this.httpService.get("projects/"+projectId)
+        this.httpService.get("project/"+projectId)
             .pipe( map( response => {
                 return (<Project[]> response)[0];
             }))
@@ -31,7 +31,7 @@ export class ProjectService {
 
     public createProject(project:Project, next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
 
-        this.httpService.post("projects", project)
+        this.httpService.post("project", project)
             .pipe( map( response => {
                 return (<Project[]> response)[0];
             }))
@@ -41,14 +41,14 @@ export class ProjectService {
 
     public deleteProject(projectId:string, next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
 
-        this.httpService.delete("projects/"+projectId)
+        this.httpService.delete("project/"+projectId)
             .subscribe(next, error, complete)
 
     }
 
     public updateProject(projectId:string, project:Project, next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
 
-        this.httpService.put("projects/"+projectId, project)
+        this.httpService.put("project/"+projectId, project)
             .pipe( map( response => {
                 return (<Project[]> response)[0];
             }))
