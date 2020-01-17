@@ -7,8 +7,8 @@
 }
 
 .background1{
-    background-color: #2980b9;
-    background-image: -webkit-linear-gradient(-80deg, #2980b9 30%, #3498db 20%);
+    background-color: var(--color-primary);
+    background-image: -webkit-linear-gradient(-80deg, var(--color-primary) 30%, var(--color-secondary) 20%);
     height: 100vh;
     width: 100vw;
 }
@@ -58,12 +58,20 @@ button{
     height: 50px;
 
     font-size: 1.4em;
-    background-color: #2980b9;
+    background-color: var(--color-primary);
     border-style: none;
     border-radius: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-tertairy) !important;
+}
+
+button:focus {
+    background-color: var(--color-quadtairy) !important;
 }
 
 button:disabled, button[disabled]:hover{
