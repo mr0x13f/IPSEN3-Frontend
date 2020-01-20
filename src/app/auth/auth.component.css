@@ -7,8 +7,8 @@
 }
 
 .background1{
-    background-color: #2980b9;
-    background-image: -webkit-linear-gradient(-80deg, #2980b9 30%, #3498db 20%);
+    background-color: var(--color-secondary);
+    background-image: -webkit-linear-gradient(-80deg, var(--color-secondary) 30%, var(--color-primary) 20%);
     height: 100vh;
     width: 100vw;
 }
@@ -58,7 +58,7 @@ button{
     height: 50px;
 
     font-size: 1.4em;
-    background-color: #2980b9;
+    background-color: var(--color-secondary);
     border-style: none;
     border-radius: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -68,6 +68,10 @@ button{
 
 button:disabled, button[disabled]:hover{
     background-color: #bbb;
+}
+
+button:hover {
+    background-color: var(--color-tertairy);
 }
 
 .link{
@@ -91,7 +95,7 @@ a{
 }
 
 a:active{
-    color: white;
+    color: var(--color-text-secondary);
 }
 
 .spinner{
