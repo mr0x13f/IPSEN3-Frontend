@@ -28,3 +28,12 @@ button {
     right: 0;
     z-index: 999999;
 }
+
+.sort-bar .btn{
+    position: relative;
+    float: left;
+}
+
+.sort-bar{
+    margin-bottom: 25px;
+}

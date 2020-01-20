@@ -1,4 +1,7 @@
 <div class="container">
+    <div class="sort-bar">
+        <button class="btn">Sort by{{ sortBy }}</button>
+    </div>
     <ul class="overview-list">
         <li class="item">
             <app-overview-item [journey]="journey" *ngFor="let journey of journeys"></app-overview-item>  
