@@ -15,7 +15,8 @@ import {
   MatInputModule,
   MatButtonModule,
   MatCardModule,
-  MatIconModule
+  MatIconModule,
+  MatExpansionModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -46,7 +47,8 @@ const material = [
   MatButtonModule,
   MatCardModule,
   OverlayModule,
-  MatIconModule
+  MatIconModule,
+  MatExpansionModule
 ];
 
 @NgModule({

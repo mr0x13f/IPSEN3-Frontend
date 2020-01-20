@@ -1,0 +1,75 @@
+.menu-options {
+    list-style: none;
+    padding: 10vh 0 0 0;
+}
+
+.accountsettings, .logoutitem {
+    padding: 0 1em;
+}
+
+.accountsettings {
+    padding-top: 1em;
+}
+
+mat-expansion-panel, .logout {
+    background-color: var(--color-primary);
+    text-align: left;
+    width: 13vw;
+}
+
+mat-icon, mat-panel-title, .logout {
+    color: var(--color-background-light);
+}
+
+mat-icon {
+    padding-right: 2vw;
+}
+
+::ng-deep .mat-expansion-indicator:after {
+    color: #FEFEFE;
+}
+
+.expansionpanellist {
+    list-style: none;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.expansionpanellist li a {
+    text-decoration: none;
+    color: var(--color-background-light);
+}
+
+.expansionpanelitems {
+    padding: 1vh 0;
+}
+
+.expansionpanelitems:first-of-type {
+    padding-top: 2vh;
+}
+
+::ng-deep .mat-expansion-panel-content {
+    background-color: var(--color-tertairy);
+}
+
+.menulogo {
+    position: absolute;
+    width: 10vw;
+    margin-left: 2vw;
+    left: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+    mat-expansion-panel, .logout {
+        width: 40vw;
+    }
+
+    .menulogo {
+        width: 40vw;
+    }
+
+    mat-panel-title {
+        font-size: 15px;
+    }
+}

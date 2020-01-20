@@ -1,5 +1,5 @@
 .row {
-    /* background-color: var(--color-background-dark); */
+    background-color: var(--color-background-light);
     border-bottom: 1px solid var(--color-background-dark);
     box-shadow: 0px 5px 15px var(--color-background-dark);
     z-index: 3;
@@ -20,6 +20,8 @@
     padding: 0;
     background-color: var(--color-primary);
     border-radius: 5px 20px 5px;
+    z-index: 10;
+    cursor: pointer;
 
 }
 
@@ -27,8 +29,23 @@ mat-icon {
     color: var(--color-background-light);
 }
 
+app-menu3 {
+    z-index: 2;
+    height: 100%;
+    background-color: var(--color-secondary);
+    display: block;
+    position: fixed;
+    left: -50vw;
+    transition: all 0.2s ease-in;
+}
+
 @media screen and (max-width: 800px) {
     .logo {
         width: 50vw;
+    }
+
+    app-menu3 {
+        width: 50vw;
+        left: -50vw;
     }
 }
