@@ -37,7 +37,6 @@ export class AuthComponent {
     if (this.isLoginMode) {
       //Login
       this.authService.login(email, password, () => {
-        console.log("On succes")
         this.router.navigate(['/main'])
       }, error => {
         this.error = 'The email and password you entered did not match our records. Please double-check and try again.';

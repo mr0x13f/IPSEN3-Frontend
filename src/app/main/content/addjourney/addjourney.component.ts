@@ -15,12 +15,13 @@ import { getLocaleDateTimeFormat, DatePipe } from '@angular/common';
 
 
 export class AddjourneyComponent implements OnInit {
-  projectForm: FormGroup; 
+  projectForm: FormGroup;
   responseStatus:Object= [];
   status:boolean ;
-  
+  licensePlate: string;
 
-  constructor(private http: HttpClient, 
+
+  constructor(private http: HttpClient,
     private httpservice: HttpService,
     private formBuilder: FormBuilder,
     private datePipe: DatePipe
@@ -28,6 +29,8 @@ export class AddjourneyComponent implements OnInit {
 
   ngOnInit() {
     this.createFormGroup();
+    this.getLicenseplate();
+
     // this.onBuildFormGroup();
   }
 
@@ -43,7 +46,7 @@ export class AddjourneyComponent implements OnInit {
       licenseplate : ['', [Validators.required]],
       description : ['']
     })
-  } 
+  }
 
   // sanitizeDate(date: string): string {
   //   if (!date) {
@@ -81,17 +84,32 @@ export class AddjourneyComponent implements OnInit {
     });
   }
 
+  getLicenseplate(){
+    if(localStorage.getItem('licensePlate')){
+      console.log('setvalue')
+      this.projectForm.get('licensePlate').setValue(localStorage.getItem('licensePlate'))
 
-  onSaveJourney(postData: { kilometers: number; 
-                            date: Date; 
+    }
+  }
+
+  saveLicenseplate(licensePlate: string){
+    if(localStorage.getItem('licensePlate')) {
+      localStorage.removeItem('licensePlate')
+    }
+    localStorage.setItem('licensePlate', licensePlate);
+
+  }
+
+
+  onSaveJourney(postData: { kilometers: number;
+                            date: Date;
                             rate: number;
-                            parkingCost: number; 
+                            parkingCost: number;
                             otherCost: number;
                             destination: string;
                             projectId: string;
                             licensePlate: string;
                             description: string}){
-                              
 
     let dateString = this.sanitizeDate(postData.date);
 
@@ -108,19 +126,23 @@ export class AddjourneyComponent implements OnInit {
       Number(postData.rate),
       postData.projectId,
       ""
-    );  
-    
+    );
+
     this.httpservice.post("journey", postJourney)
     .subscribe(
       data => console.log(data),
       err => console.log(err),
       () => console.log('Request Completed')
 
-      
+
     );
+    this.saveLicenseplate(postData.licensePlate);
+    this.projectForm.reset();
+    this.getLicenseplate();
+
 
    }
 
-  
+
 
 }

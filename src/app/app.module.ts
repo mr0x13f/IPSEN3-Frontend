@@ -21,8 +21,6 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './main/menu/menu.component';
-import { SidebarComponent } from './main/menu/sidebar/sidebar.component';
 import { ContentComponent } from './main/content/content.component';
 import { NavComponent } from './main/nav/nav.component';
 import { OverviewComponent } from './main/content/overview/overview.component';
