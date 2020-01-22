@@ -15,6 +15,8 @@
     border-radius: 10px;
     overflow:scroll;
     z-index: 1;
+    margin-top: 8vh;
+    min-height: 86vh;
 } 
 
 input:-internal-autofill-selected{

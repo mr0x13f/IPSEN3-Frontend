@@ -9,6 +9,8 @@
     min-height: 70%;
     border-radius: 20px;
     z-index: 1;
+    margin-top: 8vh;
+    min-height: 86vh;
 }
 
 .overview-list {
@@ -16,6 +18,8 @@
     list-style: none;
     margin: auto;
     padding: 0;
+    height: 84vh;
+    overflow-y: auto;
 }
 
 .item {
