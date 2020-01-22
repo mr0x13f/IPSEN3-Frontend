@@ -26,22 +26,17 @@ export class OverviewItemComponent implements OnInit {
     if((<Element>event.target).className ==='confirm-button'){
       return
     }
-
-    console.log((<Element>event.target).className)
+    
     this.open = !this.open;
   }
 
   confirm() {
-    console.log("Dit werkt!!!!!!!!");
     this.open = !this.open;
     this.confirmOpen = !this.confirmOpen;
   }
 
   removeJourney(){
-
     let confirm = this.confirm;
-
-    console.log('Journey ID: ' + this.journey.journeyId);
     this.journeyService.deleteJourney(this.journey.journeyId, confirm);
   }
 

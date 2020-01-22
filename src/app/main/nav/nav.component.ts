@@ -28,15 +28,9 @@ export class NavComponent implements OnInit {
         }
       });
   }
-  
+
 
   updatePage() {
     
-  }
-
-  //deze functie kan naar een andere componenent verplaatst worden
-  onLogout(){
-    this.authService.clearAuth();
-    this.router.navigate(['/auth'])
   }
 }
