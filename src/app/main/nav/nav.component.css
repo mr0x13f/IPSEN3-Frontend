@@ -10,6 +10,7 @@ nav {
     /* Appearance */
     background-color: var(--color-primary);
     border-radius: 0;
+    z-index: 2;
     
 }
 
