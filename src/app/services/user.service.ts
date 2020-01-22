@@ -4,7 +4,6 @@ import { map } from "rxjs/operators";
 import { HttpService } from './http.service';
 import { User } from '../models/user.model';
 import { RegisterForm } from '../models/register-form.model';
-import { AuthService } from './auth.service';
 
 @Injectable({providedIn: 'root'})
 
@@ -12,7 +11,6 @@ export class UserService {
 
     constructor(
         private httpService:HttpService,
-        private authService:AuthService,
     ) {}
 
     public getSelf(next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
@@ -45,18 +43,10 @@ export class UserService {
 
     }
 
-    public delete(confirmPassword:string, next?:()=>void, error?:(error:any)=>void, complete?:()=>void) {
-
-        this.httpService.headers = this.httpService.headers.set(
-            "Authorization",
-            "Basic " + btoa(this.authService.user.email + ":" + confirmPassword)
-        );
+    public delete(next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
 
         this.httpService.delete("user")
-            .subscribe(() => {
-                this.authService.clearAuth();
-                if (next) next();
-            }, error, complete);
+            .subscribe(next, error, complete)
 
     }
 
