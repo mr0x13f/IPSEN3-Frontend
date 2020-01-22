@@ -1,0 +1,61 @@
+.row {
+    background-color: var(--color-background-light);
+    border-bottom: 1px solid var(--color-background-dark);
+    box-shadow: 0px 5px 15px var(--color-background-dark);
+    z-index: 8;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+}
+
+.logo {
+    margin: 1em 1em 1em 0;
+    width: 10vw;
+    float: right;
+}
+
+.hamburger-button {
+    float: left;
+    margin: 1em 0 1em 1em;
+    padding: 0;
+    background-color: var(--color-primary);
+    border-radius: 5px 20px 5px;
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+mat-icon {
+    color: var(--color-background-light);
+}
+
+app-menu3 {
+    z-index: 7;
+    height: 100%;
+    background-color: var(--color-secondary);
+    display: block;
+    position: fixed;
+    left: -100vw;
+    transition: all 0.2s ease-in;
+}
+
+.background {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    z-index: 6;
+    transition: all 0.5s ease-in;
+}
+
+@media screen and (max-width: 800px) {
+    .logo {
+        width: 50vw;
+    }
+
+    app-menu3 {
+        width: 100vw;
+        left: -100vw;
+    }
+}
