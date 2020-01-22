@@ -9,5 +9,5 @@
     </div>
 </div>
 <app-menu3 [ngStyle]="{ 'left': getLeft() + 'vw' }"></app-menu3>
-
+<div class="background" [ngStyle]="{ 'pointer-events': getOpacity(), 'background': getType() }" (click)="toggleMenu()"></div>
 

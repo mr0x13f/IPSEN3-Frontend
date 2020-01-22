@@ -2,7 +2,7 @@
     background-color: var(--color-background-light);
     border-bottom: 1px solid var(--color-background-dark);
     box-shadow: 0px 5px 15px var(--color-background-dark);
-    z-index: 3;
+    z-index: 8;
     position: fixed;
     width: 100%;
     margin: 0;
@@ -30,13 +30,23 @@ mat-icon {
 }
 
 app-menu3 {
-    z-index: 2;
+    z-index: 7;
     height: 100%;
     background-color: var(--color-secondary);
     display: block;
     position: fixed;
-    left: -50vw;
+    left: -100vw;
     transition: all 0.2s ease-in;
+}
+
+.background {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    z-index: 6;
+    transition: all 0.5s ease-in;
 }
 
 @media screen and (max-width: 800px) {
@@ -45,7 +55,7 @@ app-menu3 {
     }
 
     app-menu3 {
-        width: 50vw;
-        left: -50vw;
+        width: 100vw;
+        left: -100vw;
     }
 }
