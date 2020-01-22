@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { CustomValidators } from './custom-validators';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { HttpService } from 'src/app/services/http.service';
 import { Journey } from 'src/app/models/journey.model';
-import { AuthService } from 'src/app/services/auth.service';
-import { getLocaleDateTimeFormat, DatePipe } from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-addjourney',
   templateUrl: './addjourney.component.html',
   styleUrls: ['./addjourney.component.css']
 })
-
 
 export class AddjourneyComponent implements OnInit {
   projectForm: FormGroup; 
@@ -22,40 +19,13 @@ export class AddjourneyComponent implements OnInit {
 
   constructor(private http: HttpClient, 
     private httpservice: HttpService,
-    private formBuilder: FormBuilder,
     private datePipe: DatePipe
     ){}
 
   ngOnInit() {
     this.createFormGroup();
-    // this.onBuildFormGroup();
+  
   }
-
-  onBuildFormGroup(){
-    this.projectForm = this.formBuilder.group({
-      kilometers : ['', [Validators.required]],
-      date : ['', [Validators.required]],
-      rate : ['', [Validators.required]],
-      parkcosts : [''],
-      othercosts : [''],
-      destiny : ['', [Validators.required]],
-      project : ['', [Validators.required]],
-      licenseplate : ['', [Validators.required]],
-      description : ['']
-    })
-  } 
-
-  // sanitizeDate(date: string): string {
-  //   if (!date) {
-  //     return null;
-  //   }
-  //   const dataArray = date.toString().split('-');
-  //   const month = Number(dataArray[0]) - 1;
-  //   const day = Number(dataArray[1]);
-  //   const year = Number(dataArray[2]);
-  //   const ISOString = (new Date(year, month, day)).toISOString();
-  //   return ISOString;
-  // }
 
   sanitizeDate(date:Date): string {
 
@@ -92,6 +62,8 @@ export class AddjourneyComponent implements OnInit {
                             licensePlate: string;
                             description: string}){
                               
+
+    console.log("DITTTUUU "+ postData.destination);
 
     let dateString = this.sanitizeDate(postData.date);
 

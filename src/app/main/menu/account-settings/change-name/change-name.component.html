@@ -3,30 +3,61 @@
         <!-- <div class="close-bar">
             <span>X</span>
         </div> -->
-        <p>Hello, USERNAME</p>
-        <p>Verander je gebruikersnaam hier:</p>
-        <form>
-            <input
-                class="input"
-                type="text" 
-                name="userName" 
-                id="name"
-                placeholder="vul je naam in">
+        <div class="header">
+            <h3>
+                Change username?
+            </h3>
+        </div>
+
+        <form 
+            [formGroup]="nameForm" 
+            (ngSubmit)="onChangeName(nameForm.value)"
+            autocomplete="off">
             
-            <button
-                style="float: left;"
-                matButton
-                class="btn btn-success"
-                type="submit">
-            Ja</button>                
-        
-            <button
-                style="float: right;"
-                matButton
-                class="btn btn-danger"
-                type="button"
-                (click)="closeChangeNamePopup()">
-            Nee</button>
+            <div class="form-group">
+                <div>
+                    <p>Jouw username: {{ currentUser.name }}</p>
+                    <input
+                        formControlName="username"
+                        class="input"
+                        type="text" 
+                        id="name"
+                        placeholder="vul je naam in"
+                        autocomplete="off">
+                
+                </div>
+
+                <!-- <div>
+                    <p>Hello, {{ currentUser.email }}</p>
+                    <p>Verander je email:</p>
+                    <input
+                        formControlName="username"
+                        class="input"
+                        type="text" 
+                        id="name"
+                        placeholder="vul je naam in"
+                        autocomplete="off">
+                
+                </div> -->
+
+                <div>
+                    <button
+                        style="float: left;"
+                        matButton
+                        class="btn btn-success"
+                        type="submit"
+                        [disabled]="!nameForm.valid">
+                    Ja</button>                
+                
+                    <button
+                        style="float: right;"
+                        matButton
+                        class="btn btn-danger"
+                        type="button"
+                        (click)="closeChangeNamePopup()">
+                    Nee</button>
+                </div>
+            </div>
             
         </form>
             

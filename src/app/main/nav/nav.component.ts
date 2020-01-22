@@ -22,4 +22,10 @@ export class NavComponent implements OnInit {
     this.authService.clearAuth();
     this.router.navigate(['/auth'])
   }
+
+  onSettings(){
+    this.router.navigate(['/settings'])
+
+  }
+
 }
