@@ -128,18 +128,4 @@ export class AuthService {
       .subscribe(next, error, complete);
   }
 
-  public delete(confirmPassword:string, next?:()=>void, error?:(error:any)=>void, complete?:()=>void) {
-
-    this.httpService.headers = this.httpService.headers.set(
-        "Authorization",
-        "Basic " + btoa(this.user.email + ":" + confirmPassword)
-    );
-
-    this.userService.delete(() => {
-        this.clearAuth();
-        if (next) next();
-    }, error, complete);
-
-}
-
 }
