@@ -6,11 +6,10 @@
     padding: 12px;
     width: 90%;
     max-width: 600px;
-    min-height: 70%;
     border-radius: 20px;
     z-index: 1;
     margin-top: 2vh;
-    min-height: calc(78vh - 50px);
+    min-height: calc(84vh - 50px);
 }
 
 .overview-list {
@@ -18,7 +17,7 @@
     list-style: none;
     margin: auto;
     padding: 0;
-    height: calc(76vh - 50px);
+    height: calc(82vh - 50px);
     overflow-y: auto;
 }
 
