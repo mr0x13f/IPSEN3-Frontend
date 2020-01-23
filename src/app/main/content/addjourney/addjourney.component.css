@@ -17,7 +17,6 @@
     z-index: 1;
     margin-top: 2vh;
     min-height: calc(78vh - 50px);
-    overflow-y: scroll;
 } 
 
 input:-internal-autofill-selected{
