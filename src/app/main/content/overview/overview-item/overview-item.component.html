@@ -39,18 +39,22 @@
             <div class="title">Beschrijving</div>
             <div class="journey-data">{{ journey.description }}</div>
         </div>
-        <button class="delete-button" (click)="verwijderRit()">Verwijder Rit</button>
-
-
         <div class="small-items">
-            <div>
-                <div class="confirm-text">Weet u het zeker?</div>
-            </div>
+            <button class="delete-button" (click)="confirm($event)" [ngClass]="{'confirmOpen': confirmOpen}">Verwijder Rit</button>
+            <button class="confirm-button" (click)="removeJourney($event)" [ngClass]="{'confirmOpen': confirmOpen}">Bevestigen</button>
+            <div class="confirm-text" [ngClass]="{'confirmOpen': confirmOpen}">Weet u het zeker?</div>
         </div>
 
-        <!-- <button class="delete-button" (click)="toggleConfirm()">Verwijder Rit</button>
-        <div class="bs-collapse collapse" [ngClass]="{'confirm': confirm}">
-            <div>weet u het zeker</div>
+
+
+        <!-- <button class="delete-button" (click)="confirm($event)">Verwijder Rit</button>
+
+
+        <div class="bs-collapse collapse" [ngClass]="{'confirmOpen': confirmOpen}">
+            <div class="small-items">
+                <div class="confirm-text">Weet u het zeker?</div>
+                <button class="delete-button" (click)="verwijderRit()">Verwijder Rit</button>
+            </div>
         </div> -->
     </li>
 </ul>
