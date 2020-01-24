@@ -128,4 +128,22 @@ export class AuthService {
       .subscribe(next, error, complete);
   }
 
+  public changePassword(oldPassword:string, newPassword:string, next?: (value: any) => void, error?: (error: any) => void,) {
+
+    this.httpService.headers = this.httpService.headers.set(
+      "Authorization",
+      "Basic " + btoa(this.user.email + ":" + oldPassword)
+    );
+
+    this.userService.changePassword(newPassword, next, error, () => {
+      
+      this.httpService.headers = this.httpService.headers.set(
+        "Authorization",
+        "Bearer " + this.token
+      );
+
+    });
+
+  }
+
 }
