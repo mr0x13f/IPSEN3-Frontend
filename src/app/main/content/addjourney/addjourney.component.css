@@ -1,28 +1,30 @@
 *{
     font-family: "roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 }
 .box{
     position: relative;
-    top: 400px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 90%;
-    width: 95%;
-    padding: 40px;
-    background: rgba(114, 114, 114, 0.8);
+    max-height: 83vh;
+    width: 90%;
+    max-width: 800px;
+    padding: 16px;
+    margin: auto;
+    background: var(--color-background-dark);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(177, 174, 174, 0.952);
     border-radius: 10px;
     overflow:scroll;
-} */
+    z-index: 1;
+    margin-top: 1;
+    min-height: calc(84vh - 50px);
+} 
 
 input:-internal-autofill-selected{
-    background: rgba(114, 114, 114, 0.8) bold !important;
+    background: var(--color-text-tertairy) !important;
 }
 
 form, form:active, form:focus {
-    color: black;
-
+    color: var(--color-text-primary);
 }
 .form-field-date{
     width: 100%;
@@ -38,52 +40,78 @@ input {
     padding: 0 10px;
     margin: 2px;
     height: 30px;
-    color: black;
+    color: var(--color-text-tertairy);
     position: relative;
     width: 100%;
     border-radius: 15px;
-    background: rgba(90, 80, 80, 0.8);
+    background: var(--color-background-light);
     font-size: 1.2em;
-    border: 2px solid rgba(29, 25, 25, 0.8);
-    color: black;
 }
 textarea{
     display: block;
     position: relative;
     width: 100%;
     border-radius: 15px;
-    background: rgba(90, 80, 80, 0.8);
-    border: 2px solid rgba(29, 25, 25, 0.8);
+    background: var(--color-background-light);
+    border: none;
     font-size: 1.2em;
-    color: black;
+    color: var(--color-text-tertairy);
 
 }
 select {
+    border: none;
     padding: 0 10px;
     margin: 2px;
     height: 30px;
-    color: black;
+    color: var(--color-text-tertairy);
     position: relative;
     width: 100%;
     border-radius: 15px;
-    background: rgba(90, 80, 80, 0.8) !important;
+    background: var(--color-background-light) !important;
     font-size: 1.2em;
-    border: 2px solid rgba(29, 25, 25, 0.8); 
 }
 
-
+.submit-button {
+    font-size: 1.2em;
+    background-color: var(--color-primary);
+    color: var(--color-text-secondary);
+    border: none;
+    border-radius: 20px;
+    margin: 7px;
+    padding: 3px 20px;
+}
 
 input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched,
 select.ng-invalid.ng-touched
 {
-    border: 1px solid red;
+    border: 1px solid var(--color-accent-primary);
+}
+
+.title {
+    position: relative;
+    width: fit-content;
+    color: var(--color-primary);
+    margin: 8vh auto 0 auto;
+    font-size: 2em;
+}
+
+@media screen and (max-height: 800px) {
+    .title {
+        margin: 11vh auto 0 auto;
+       font-size: 1.9em;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .title {
+        margin: 13vh auto 0 auto;
+       font-size: 1.5em;
+    }
 }
 
 @media(min-width: 560px){
     .box{
         width: 550px;
-
     }
-
 }

@@ -15,10 +15,10 @@ import {
   } from '@angular/material';
 
 
-import { AccountSettingsComponent } from './account-settings/account-settings.component';
-import { DeleteAccountComponent } from './account-settings/delete-account/delete-account.component';
-import { ChangePasswordComponent } from './account-settings/change-password/change-password.component';
-import { ChangeNameComponent } from './account-settings/change-name/change-name.component';
+import { AccountSettingsComponent } from '../header/account-settings/account-settings.component';
+import { DeleteAccountComponent } from '../header/account-settings/delete-account/delete-account.component';
+import { ChangePasswordComponent } from '../header/account-settings/change-password/change-password.component';
+import { ChangeNameComponent } from '../header/account-settings/change-name/change-name.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   
   const material = [
@@ -35,11 +35,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
       SidebarComponent,
       ProjectsComponent,
       CompaniesComponent,
-      AccountSettingsComponent,
-      DeleteAccountComponent,
-      ChangePasswordComponent,
-      ChangeNameComponent
-      
+       
     ],
     imports: [
       material,
@@ -51,7 +47,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
         MenuComponent,
         SidebarComponent
     ],
-    entryComponents: [DeleteAccountComponent, ChangeNameComponent, ChangePasswordComponent],
+    entryComponents: [ ],
     providers: [],
     bootstrap: []
   })

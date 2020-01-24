@@ -1,27 +1,27 @@
 .container {
     position: relative;
     width: 100%;
-    color: white;
-    background-color: rgba(60, 60, 60, 0.5);
+    color: var(--color-text-primary);
+    background-color: var(--color-background-dark);
     padding: 3px 2px;
     margin: 0;
     display: inline-block;
     font-family: "roboto", sans-serif;
     font-size: 1.6em;
     list-style-type: none;
-    border-bottom: 1px solid rgba(80, 80, 80);
+    border-bottom: 1px solid var(--color-background-light);
+}
+
+.container:hover {
+    cursor: pointer;
 }
 
 .sum {
     font-weight: bold;
 }
 
-.container:hover {
-    background-color: rgba(40, 40, 40, 0.5);
-}
-
 .checkmark {
-    background-color: #8E8E8E;
+    background-color: var(--color-checkmark-false);
     position: relative;
     font-size: 14px;
     display: flex;
@@ -29,7 +29,7 @@
     align-items: center;
     width: 23px;
     height: 23px;
-    color: white;
+    color: var(--color-text-secondary);
     border-radius: 100%;
 }
 
@@ -42,8 +42,13 @@
     margin-top: 5px;
 }
 
+.collapse.confirmOpen {
+    display: contents;
+    margin-top: 5px;
+}
+
 .checkmark.is-checked {
-    background-color: #00C400;
+    background-color: var(--color-checkmark-true);
 }
 
 .title {
@@ -84,8 +89,28 @@
 
 .delete-button {
     font-size: 0.8em;
-    background-color: orangered;
-    color: white;
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-secondary);
+    border: none;
+    border-radius: 20px;
+    margin: 7px;
+    padding: 3px 20px;
+    display: inline;
+}
+
+.delete-button.confirmOpen {
+    display: none;
+}
+
+.confirm-button {
+    display: none;
+}
+
+.confirm-button.confirmOpen {
+    display: inline;
+    font-size: 0.8em;
+    background-color: var(--color-accent-secondary);
+    color: var(--color-text-secondary);
     border: none;
     border-radius: 20px;
     margin: 7px;
@@ -94,6 +119,16 @@
 
 .confirm-text {
     display: none;
+}
+
+.confirm-text.confirmOpen {
+    display: contents;
     font-size: 0.8em;
     font-style: italic;
+}
+
+@media screen and (min-width: 800px) {
+    .container:hover {
+        background-color: var(--color-background-medium);
+    }
 }

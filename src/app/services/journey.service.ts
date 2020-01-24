@@ -20,11 +20,14 @@ export class JourneyService {
 
     }
 
-    
-
     public getTotalCost(journey:Journey): number {
 
       return journey.kilometers * journey.rate + journey.parkingCost + journey.otherCost;
 
+  }
+
+  public deleteJourney(journeyId, completed) {
+    this.httpService.delete("journey/"+journeyId)
+    .subscribe(completed)
   }
 }

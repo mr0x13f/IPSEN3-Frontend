@@ -12,6 +12,7 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class ChangePasswordComponent implements OnInit {
   passwordForm: FormGroup;
+  passwordBool: boolean = true;
 
   constructor(public dialogRef: MatDialogRef<ChangePasswordComponent>,
     public authService: AuthService,
@@ -20,24 +21,37 @@ export class ChangePasswordComponent implements OnInit {
 
   ngOnInit() {
     this.onCreateNameForm();
-    
   }
 
   onCreateNameForm(){
     
     this.passwordForm = new FormGroup({
-      'oldPassword' : new FormControl(null, [Validators.required, Validators.nullValidator]),
-      'firstNewPassword' : new FormControl(null, [Validators.required, Validators.nullValidator]),
-      'secondNewPassword' : new FormControl(null, [Validators.required, Validators.nullValidator])
+      'oldPassword' : new FormControl(null, [Validators.required]),
+      'firstNewPassword' : new FormControl(null, [Validators.required]),
+      'secondNewPassword' : new FormControl(null, [Validators.required])
         
     });
-  
   }
 
-  
   onUpdatePassword(){
-    
+  const oldPassword = this.passwordForm.value.oldPassword;
+  const firstNewPassword = this.passwordForm.value.firstNewPassword;
+  const secondNewPassword = this.passwordForm.value.secondNewPassword;
+
+  
+    if(firstNewPassword == secondNewPassword){
+      //Update password
+      this.userService.update;
+      this.passwordBool =true;
+      // if(oldPassword == this.authService.user.password){POST.userService}
+      
+    }else{
+      this.passwordBool= false;
+      
+    }
   }
+  
+  
 
   closeChangePasswordPopup(){
     this.dialogRef.close();

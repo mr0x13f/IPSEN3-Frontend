@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-6">
+        <button class="hamburger-button" (click)="toggleMenu()" mat-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div class="col-xs-6">
+        <img class="logo" src="../../../assets/logo.png" alt="Digitale Factuur">
+    </div>
+</div>
+<app-menu3 [ngStyle]="{ 'left': getLeft() + 'vw' }"></app-menu3>
+<div class="background" [ngStyle]="{ 'pointer-events': getOpacity(), 'background': getType() }" (click)="toggleMenu()"></div>
+

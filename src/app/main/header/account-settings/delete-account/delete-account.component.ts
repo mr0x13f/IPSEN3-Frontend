@@ -16,6 +16,7 @@ export class DeleteAccountComponent implements OnInit {
     public authService: AuthService,
     public router: Router,
     public userService: UserService) { }
+    
 
   ngOnInit() {
     
@@ -27,6 +28,7 @@ export class DeleteAccountComponent implements OnInit {
 
   onDeleteAccount(){
     this.userService.delete(() => {
+      this.authService.clearAuth();
       this.onNavigateToInlog()
       console.log("Het werkt")
     }, error => {

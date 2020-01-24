@@ -7,25 +7,25 @@
 }
 
 .background1{
-    background-color: #2980b9;
-    background-image: -webkit-linear-gradient(-80deg, #2980b9 30%, #3498db 20%);
+    background-color: var(--color-primary);
+    background-image: -webkit-linear-gradient(-80deg, var(--color-primary) 30%, var(--color-secondary) 20%);
     height: 100vh;
     width: 100vw;
 }
 
 form{
-    top: 30vh;
+    top: 10vh;
     position: relative;
 
 }
 
 label{
 
-    left: calc(50% - 200px);
-    right: calc(50% - 200px);
+    left: calc(50% - 150px);
+    right: calc(50% - 150px);
     position: relative;
 
-    width: 400px;
+    width: 300px;
     padding: 20px 0;
 
     font-family: Verdana;
@@ -35,12 +35,12 @@ label{
 
 input{
     margin: 10px 0;
-    left: calc(50% - 200px);
-    right: calc(50% - 200px);
+    left: calc(50% - 150px);
+    right: calc(50% - 150px);
     position: relative;
 
     height: 35px;
-    width: 400px;
+    width: 300px;
     padding-left: 10px;
 
     border-style: none;
@@ -49,7 +49,7 @@ input{
 }
 
 button{
-    margin-top: 70px;
+    margin-top: 30px;
     left: calc(50% - 100px);
     right: calc(50% - 100px);
     position: relative;
@@ -58,7 +58,7 @@ button{
     height: 50px;
 
     font-size: 1.4em;
-    background-color: #2980b9;
+    background-color: var(--color-primary);
     border-style: none;
     border-radius: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -66,8 +66,20 @@ button{
     cursor: pointer;
 }
 
+button:hover {
+    background-color: var(--color-tertairy) !important;
+}
+
+button:focus {
+    background-color: var(--color-quadtairy) !important;
+}
+
 button:disabled, button[disabled]:hover{
     background-color: #bbb;
+}
+
+button:hover {
+    background-color: var(--color-tertairy);
 }
 
 .link{
@@ -91,7 +103,7 @@ a{
 }
 
 a:active{
-    color: white;
+    color: var(--color-text-secondary);
 }
 
 .spinner{
@@ -110,4 +122,10 @@ a:active{
     text-align: center;
 
     width: 400px;
+}
+
+@media only screen and (min-height: 600px) {
+  form{
+    top: 30vh;
+  }
 }

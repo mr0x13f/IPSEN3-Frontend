@@ -20,15 +20,24 @@ export class OverviewItemComponent implements OnInit {
     if((<Element>event.target).className === 'container'){
       return
     }
+    if((<Element>event.target).className ==='delete-button'){
+      return
+    }
+    if((<Element>event.target).className ==='confirm-button'){
+      return
+    }
+    
     this.open = !this.open;
   }
 
   confirm() {
+    this.open = !this.open;
     this.confirmOpen = !this.confirmOpen;
   }
 
-  verwijderRit(){
-    console.log('Verwijder rit!')
+  removeJourney(){
+    let confirm = this.confirm;
+    this.journeyService.deleteJourney(this.journey.journeyId, confirm);
   }
 
   ngOnInit() {

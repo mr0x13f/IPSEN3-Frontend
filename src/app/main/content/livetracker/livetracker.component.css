@@ -7,20 +7,21 @@ div.livetracker {
     left: 50%;
     width: 200px;
     height: 200px;
+    z-index: 1;
 
     /* Palette */
-    --border-color: #007BD3;
-    --main-color: #0094FF;
-    --hover-color: #2BAAFF;
+    --border-color: var(--color-tertairy);
+    --main-color: var(--color-primary);
+    --hover-color: var(--color-secondary);
 
 }
 
 div.livetracker.stop {
 
     /* Palette */
-    --border-color: rgb(179, 0, 0);
-    --main-color: rgb(255, 0, 0);
-    --hover-color: #ff4444;
+    --border-color: var(--color-accent-tertairy);
+    --main-color: var(--color-accent-primary);
+    --hover-color: var(--color-accent-secondary);
 
 }
 
@@ -113,4 +114,26 @@ div.livetracker svg.octagon.background {
 div.livetracker svg.octagon.active.background {
     width: 100%;
     height: 100%;
+}
+
+.title {
+    position: relative;
+    width: fit-content;
+    color: var(--color-primary);
+    margin: 9vh auto 0 auto;
+    font-size: 2em;
+}
+
+@media screen and (max-height: 800px) {
+    .title {
+        margin: 11vh auto 0 auto;
+       font-size: 1.9em;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .title {
+        margin: 13vh auto 0 auto;
+       font-size: 1.5em;
+    }
 }
