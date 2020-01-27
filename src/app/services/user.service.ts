@@ -52,7 +52,7 @@ export class UserService {
 
     public changePassword(newPassword:string, next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
 
-        this.httpService.post("user/changePassword", {password:newPassword})
+        this.httpService.post("user/resetpassword", {password:newPassword})
             .subscribe(next, error, complete)
 
     }
