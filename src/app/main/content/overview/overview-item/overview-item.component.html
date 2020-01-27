@@ -1,18 +1,19 @@
 <ul class="container" (click)="toggle($event)">
     <li class="smallview">
-        <div>{{ journey.destination }}</div>
+        <div >{{ journey.destination }}</div>
+        <div class="hidden-data">{{ journey.date | date }}</div>
         <div>{{ (journeyService.getTotalCost(journey)) | currency : 'EUR'}}</div>
         <div class="checkmark fas fa-check" [ngClass]="{'is-checked': journey.isBilled}"></div>
     </li>
     <li class="bs-collapse collapse" [ngClass]="{'open': open}">
         <div class="small-items">
             <div>
-                <div class="title">Datum</div>
-                <div class="journey-data">{{ journey.date | date }}</div>
-            </div>
-            <div>
                 <div class="title">Kilometers</div>
                 <div class="journey-data">{{ journey.kilometers }}</div>
+            </div>
+            <div>
+                <div class="title display-data">Datum</div>
+                <div class="journey-data display-data">{{ journey.date | date }}</div>
             </div>
             <div>
                 <div class="title">Project</div>
@@ -44,17 +45,5 @@
             <button class="confirm-button" (click)="removeJourney($event)" [ngClass]="{'confirmOpen': confirmOpen}">Bevestigen</button>
             <div class="confirm-text" [ngClass]="{'confirmOpen': confirmOpen}">Weet u het zeker?</div>
         </div>
-
-
-
-        <!-- <button class="delete-button" (click)="confirm($event)">Verwijder Rit</button>
-
-
-        <div class="bs-collapse collapse" [ngClass]="{'confirmOpen': confirmOpen}">
-            <div class="small-items">
-                <div class="confirm-text">Weet u het zeker?</div>
-                <button class="delete-button" (click)="verwijderRit()">Verwijder Rit</button>
-            </div>
-        </div> -->
     </li>
 </ul>

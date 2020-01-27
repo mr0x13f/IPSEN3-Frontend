@@ -35,4 +35,12 @@ export class OverviewComponent implements OnInit {
     
   }
 
+  removeListItem(journey: Journey) {
+    for( let i = 0; i < this.journeys.length; i++) {
+      if ( this.journeys[i] === journey) {
+        this.journeys.splice(i, 1);
+      }
+    }
+  }
+
 }

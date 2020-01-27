@@ -127,8 +127,35 @@
     font-style: italic;
 }
 
+.hidden-data {
+    display: none;
+}
+
+.display-data .title {
+    display: contents;
+}
+
+.display-data .journey-data {
+    display: contents;
+}
+
 @media screen and (min-width: 800px) {
+    .smallview {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 24px;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+
     .container:hover {
         background-color: var(--color-background-medium);
+    }
+
+    .hidden-data {
+        display: contents;
+    }
+
+    .display-data {
+        display: none;
     }
 }
