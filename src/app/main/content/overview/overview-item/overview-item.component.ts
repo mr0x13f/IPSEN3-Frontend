@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Journey } from 'src/app/models/journey.model';
 import { JourneyService } from 'src/app/services/journey.service';
+import { Project } from 'src/app/models/project.model';
 
 @Component({
   selector: 'app-overview-item',
@@ -9,6 +10,7 @@ import { JourneyService } from 'src/app/services/journey.service';
 })
 export class OverviewItemComponent implements OnInit {
   @Input() journey: Journey;
+  @Input() project: Project;
   open = false;
   confirmOpen = false;
 

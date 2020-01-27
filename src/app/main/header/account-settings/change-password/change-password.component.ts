@@ -53,7 +53,6 @@ export class ChangePasswordComponent implements OnInit {
           console.log("FOUT")
           this.oldPasswordBool =false;
           
-      
         });
       
     }else{
