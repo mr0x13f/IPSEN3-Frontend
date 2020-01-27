@@ -17,10 +17,10 @@ export class MainComponent implements OnInit {
   ngOnInit() {
 
     // Ga naar login scherm als er niet ingelogd is
-    if (!this.authService.isLoggedIn()) {
-      this.router.navigate(["/login"]);
-      return;
-    }
+    // if (!this.authService.isLoggedIn()) {
+    //   this.router.navigate(["/login"]);
+    //   return;
+    // }
 
   }
 
