@@ -4,6 +4,8 @@ import { HttpService } from 'src/app/services/http.service';
 import { map } from 'rxjs/internal/operators/map';
 import { JourneyService } from 'src/app/services/journey.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { ProjectService } from 'src/app/services/project.service';
+import { Project } from 'src/app/models/project.model';
 
 
 @Component({
@@ -13,12 +15,15 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class OverviewComponent implements OnInit {
 
-  journeys:Journey[]
+  journeys:Journey[] = [];
+  projects:{[id:string]:Project} = {};
+
 
   constructor(
     private httpService:HttpService,
     private journeyService:JourneyService,
-    private authService:AuthService
+    private authService:AuthService,
+    private projectService:ProjectService
   ) { }
 
   ngOnInit() {
@@ -30,9 +35,19 @@ export class OverviewComponent implements OnInit {
   getJourneys() {
 
     this.journeyService.getJourneys(journeys => {
-      this.journeys = journeys
+      this.journeys = journeys;
+
+      for(let journey of this.journeys) {
+
+        if (this.projects[journey.projectId] == null) {
+  
+          this.projectService.getProjectById(journey.projectId,
+            (project) => {
+              this.projects[journey.projectId] = project;
+            })
+        }
+      }
     });
-    
   }
 
   removeListItem(journey: Journey) {
@@ -42,5 +57,4 @@ export class OverviewComponent implements OnInit {
       }
     }
   }
-
 }

@@ -17,7 +17,7 @@
             </div>
             <div>
                 <div class="title">Project</div>
-                <div class="journey-data">{{ journey.projectId }}</div>
+                <div class="journey-data" *ngIf="project != null">{{ (project.name.length > 15)? (project.name | slice:0:12)+'...':(project.name) }}</div>
             </div>
             <div>
                 <div class="title">Voertuig</div>
