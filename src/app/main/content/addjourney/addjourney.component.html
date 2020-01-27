@@ -107,7 +107,7 @@
                 formControlName="projectId"
                 id="project"
                 >
-                <option *ngFor="let project of projects" value="this.project.projectId"> {{ project.name }} </option>
+                <option *ngFor="let project of projects" [value]="this.project.projectId"> {{ project.name }} </option>
             </select>
         </div>
 
