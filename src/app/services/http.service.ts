@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 export class HttpService {
 
-    public baseUrl: string = "http://localhost:8080/";
+    public baseUrl: string = "http://www.hydrateyourself.moe:6900/";
     public headers: HttpHeaders = new HttpHeaders({
         "Content-Type": "application/json",
         "Accept": "application/json",

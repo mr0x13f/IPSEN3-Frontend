@@ -33,4 +33,10 @@ export class NavComponent implements OnInit {
   updatePage() {
     
   }
+
+  onSettings(){
+    this.router.navigate(['/settings'])
+
+  }
+
 }

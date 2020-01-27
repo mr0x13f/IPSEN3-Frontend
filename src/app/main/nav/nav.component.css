@@ -76,5 +76,20 @@ nav ul li a i {
 }
 
 #logout:hover{
+    background-color: #1A71CE;
+}
+
+#settings{
+    cursor: pointer;
+    position: relative;
+    float: right;
+    display: block;
+    background-color: #155CA8;
+    padding: 12px;
+    color: white;
+}
+
+#settings:hover{
+    background-color: #1A71CE;
     background-color: var(--color-secondary);
 }

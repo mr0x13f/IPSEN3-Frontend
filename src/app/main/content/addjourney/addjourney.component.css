@@ -29,10 +29,10 @@ form, form:active, form:focus {
 .form-field-date{
     width: 100%;
 }
-hr{
-    margin: 0px;
-    margin-bottom: 10px;
-}
+::ng-deep .mat-form-field-wrapper{
+    margin-bottom: -1.50em;
+ }
+
 ::-webkit-scrollbar { 
     display: none; 
 }
