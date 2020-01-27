@@ -1,10 +1,10 @@
 <div class="title">Rit invoeren</div>
 
 <form autocomplete="off" [formGroup]="projectForm" (ngSubmit)="onSaveJourney(projectForm.value)">
-    <div class="box">
-        <label class="special-span">Velden met een * zijn verplicht
+    
 
-        </label>
+    <div class="box">
+        <label class="special-span">Alle velden met een * zijn verplicht</label>
         <label> </label>
 
         <div class="row">
@@ -26,7 +26,7 @@
                     <label style="padding-bottom: 5px">Datum*</label>
                     <mat-form-field class="form-field-date">
                         <input
-                            style="position: absolute; top: -17px; left: 0px; font-size: 11px;"
+                            style="position: absolute; top: -20px; left: 0px; font-size: 11px;"
                             formControlName="date"
                             matInput [matDatepicker]="myDatepicker"
                             autocomplete="off"
@@ -37,8 +37,6 @@
                 </div>
             </div>
         </div>
-
-        <hr>
 
         <div class="row">
             <div class="col-xs-6">
@@ -91,8 +89,6 @@
             </div>
         </div>
 
-        <hr>
-
         <div class="form-group">
             <label for="destination">Bestemming*</label>
             <input
@@ -138,6 +134,13 @@
                 autocomplete="off"
                 ></textarea>
         </div>
-        <button class="submit-button" type="submit" [disabled]="!projectForm.valid">Rit Opslaan</button>
+
+        <div>
+            <button 
+                class="submit-button" 
+                type="submit" 
+                [disabled]="!projectForm.valid"
+            >Rit Opslaan</button>
+        </div>
     </div>
-    </form>
+</form>

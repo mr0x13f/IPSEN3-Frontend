@@ -7,22 +7,12 @@
                     <mat-icon class="menu-option-icon">settings</mat-icon>Account Settings
                 </mat-panel-title>
             </mat-expansion-panel-header>
-            <ul class="expansionpanellist">
-                <li class="expansionpanelitems">
-                    <a href="#">Naam veranderen</a>
-                </li>
-                <li class="expansionpanelitems">
-                    <a href="#">Wachtwoord veranderen</a>
-                </li>
-                <li class="expansionpanelitems">
-                    <a href="#">Account verwijderen</a>
-                </li>
-            </ul>            
+            <app-account-settings></app-account-settings>
         </mat-expansion-panel>
         <hr>
     </li>
     <li class="logoutitem">
-        <button mat-raised-button routerLink="/auth" class="logout"> 
+        <button mat-raised-button (click)="onLogout()" class="logout"> 
                 <mat-icon class="menu-option-icon">person-outline</mat-icon>Log Out
         </button>
         <hr>

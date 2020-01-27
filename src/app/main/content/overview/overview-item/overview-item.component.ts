@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Journey } from 'src/app/models/journey.model';
 import { JourneyService } from 'src/app/services/journey.service';
 
@@ -11,6 +11,8 @@ export class OverviewItemComponent implements OnInit {
   @Input() journey: Journey;
   open = false;
   confirmOpen = false;
+
+  @Output("remove") removeEvent = new EventEmitter<Journey>();
 
   constructor(
     public journeyService:JourneyService
@@ -38,6 +40,7 @@ export class OverviewItemComponent implements OnInit {
   removeJourney(){
     let confirm = this.confirm;
     this.journeyService.deleteJourney(this.journey.journeyId, confirm);
+    this.removeEvent.emit(this.journey);
   }
 
   ngOnInit() {

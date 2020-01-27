@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, TemplateRef } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { MenuModule } from './main/menu/menu.module';
@@ -34,6 +34,10 @@ import { OverviewItemComponent } from './main/content/overview/overview-item/ove
 import { AuthComponent } from './auth/auth.component';
 import { HeaderComponent } from './main/header/header.component';
 import { Menu3Component } from './main/header/menu3/menu3.component';
+import { AccountSettingsComponent } from './main/header/account-settings/account-settings.component';
+import { ChangeNameComponent } from './main/header/account-settings/change-name/change-name.component';
+import { ChangePasswordComponent } from './main/header/account-settings/change-password/change-password.component';
+import { DeleteAccountComponent } from './main/header/account-settings/delete-account/delete-account.component';
 
 const material = [
   MatToolbarModule,
@@ -63,7 +67,11 @@ const material = [
     AuthComponent,
     LoadingSpinnerComponent,
     Menu3Component,
-    HeaderComponent
+    HeaderComponent,
+    AccountSettingsComponent,
+    ChangeNameComponent,
+    ChangePasswordComponent,
+    DeleteAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +86,7 @@ const material = [
     material,
     ReactiveFormsModule
   ],
-  entryComponents: [],
+  entryComponents: [DeleteAccountComponent, ChangeNameComponent, ChangePasswordComponent],
   providers: [
     DatePipe
   ],

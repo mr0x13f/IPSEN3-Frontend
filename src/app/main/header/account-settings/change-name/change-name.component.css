@@ -1,6 +1,9 @@
 .popup-container {
     padding: 0;
     margin: 0;
+    display: block;
+    width: 300px; 
+    max-width: 90%;;
 }
 
 .popup{
@@ -20,6 +23,16 @@
     margin-right: 2%;
     margin-top: 2%;
     cursor: pointer;
+}
+
+.header{
+    text-align: center;
+    display: inline;
+    
+    
+}
+p{
+    padding-top: 20px;
 }
 
 

@@ -22,9 +22,9 @@ export class NavComponent implements OnInit {
       (val) => {
         if (val) {
           let url = (<NavigationEnd> val).url;
-          this.isAddjourney = url == "/main/addjourney";
-          this.isLivetracker = url == "/main/livetracker";
-          this.isOverview = url == "/main/overview";
+          this.isAddjourney = url === "/main/addjourney";
+          this.isLivetracker = url === "/main/livetracker";
+          this.isOverview = url === "/main/overview";
         }
       });
   }
@@ -33,4 +33,10 @@ export class NavComponent implements OnInit {
   updatePage() {
     
   }
+
+  onSettings(){
+    this.router.navigate(['/settings'])
+
+  }
+
 }

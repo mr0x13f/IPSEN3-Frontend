@@ -14,6 +14,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class OverviewComponent implements OnInit {
 
   journeys:Journey[]
+  sortByDate = true;
 
   constructor(
     private httpService:HttpService,
@@ -27,12 +28,24 @@ export class OverviewComponent implements OnInit {
 
   }
 
+  changeSortByDate(){
+    this.sortByDate = !this.sortByDate;
+  }
+
   getJourneys() {
 
     this.journeyService.getJourneys(journeys => {
       this.journeys = journeys
     });
     
+  }
+
+  removeListItem(journey: Journey) {
+    for( let i = 0; i < this.journeys.length; i++) {
+      if ( this.journeys[i] === journey) {
+        this.journeys.splice(i, 1);
+      }
+    }
   }
 
 }

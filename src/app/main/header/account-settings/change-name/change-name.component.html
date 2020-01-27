@@ -1,0 +1,52 @@
+<div class="popup-container">
+    <div class="popup">
+        <!-- <div class="close-bar">
+            <span>X</span>
+        </div> -->
+        <div class="header">
+            <h3>
+                Change username?
+            </h3>
+        </div>
+
+        <form 
+            [formGroup]="nameForm" 
+            (ngSubmit)="onChangeName(nameForm.value)"
+            autocomplete="off">
+            
+            <div class="form-group">
+                <div>
+                    <p>Jouw username: {{ currentUser.name }}</p>
+                    <input
+                        formControlName="username"
+                        class="input"
+                        type="text" 
+                        id="name"
+                        placeholder="vul je naam in"
+                        autocomplete="off">
+                
+                </div>
+
+                <div>
+                    <button
+                        style="float: left;"
+                        matButton
+                        class="btn btn-success"
+                        type="submit"
+                        [disabled]="!nameForm.valid">
+                    Ja</button>                
+                
+                    <button
+                        style="float: right;"
+                        matButton
+                        class="btn btn-danger"
+                        type="button"
+                        (click)="closeChangeNamePopup()">
+                    Nee</button>
+                </div>
+            </div>
+            
+        </form>
+            
+    </div>
+</div>

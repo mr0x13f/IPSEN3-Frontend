@@ -1,11 +1,23 @@
 <div class="title">Overzicht</div>
 
 <div class="container">
+    <div class="sort-bar">
+        <button class="btn" (click)='changeSortByDate()'>Sorteer op {{ sortByDate ? 'project' : 'datum' }}</button>
+        <select class="btn" name="" id="" *ngIf="!sortByDate">
+          <option value="">Projectnaam1</option>
+          <option value="">Projectnaam2</option>
+          <option value="">Projectnaam3</option>
+          <option value="">Projectnaam4</option>
+
+        </select>
+    </div>
+    <hr>
+    
     <ul class="overview-list">
         <li class="item">
-            <app-overview-item [journey]="journey" *ngFor="let journey of journeys"></app-overview-item>  
+            <app-overview-item [journey]="journey" (remove)="removeListItem($event)" *ngFor="let journey of journeys"></app-overview-item>  
         </li>
     </ul>
 </div>
 
-<button (click)="getJourneys()">Refresh</button>
+<!-- <button (click)="getJourneys()">Refresh</button> -->
