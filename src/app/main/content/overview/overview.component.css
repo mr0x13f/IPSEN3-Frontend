@@ -6,8 +6,10 @@
     padding: 12px;
     width: 90%;
     max-width: 600px;
-    min-height: 70%;
     border-radius: 20px;
+    z-index: 1;
+    margin-top: 2vh;
+    min-height: calc(84vh - 50px);
 }
 
 .overview-list {
@@ -15,6 +17,8 @@
     list-style: none;
     margin: auto;
     padding: 0;
+    height: calc(82vh - 50px);
+    overflow-y: auto;
 }
 
 .item {
@@ -46,4 +50,25 @@ hr{
     border-bottom: 1px solid var(--color-primary);
 
 
+}
+.title {
+    position: relative;
+    width: fit-content;
+    color: var(--color-primary);
+    margin: 9vh auto 0 auto;
+    font-size: 2em;
+}
+
+@media screen and (max-height: 800px) {
+    .title {
+        margin: 11vh auto 0 auto;
+       font-size: 1.9em;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .title {
+        margin: 13vh auto 0 auto;
+       font-size: 1.5em;
+    }
 }

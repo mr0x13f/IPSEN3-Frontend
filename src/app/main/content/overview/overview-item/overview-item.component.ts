@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Journey } from 'src/app/models/journey.model';
 import { JourneyService } from 'src/app/services/journey.service';
 
@@ -12,6 +12,8 @@ export class OverviewItemComponent implements OnInit {
   open = false;
   confirmOpen = false;
 
+  @Output("remove") removeEvent = new EventEmitter<Journey>();
+
   constructor(
     public journeyService:JourneyService
   ) { }
@@ -20,19 +22,25 @@ export class OverviewItemComponent implements OnInit {
     if((<Element>event.target).className === 'container'){
       return
     }
-    if( (<Element>event.target).className ==='delete-button'){
+    if((<Element>event.target).className ==='delete-button'){
       return
     }
-    console.log((<Element>event.target).className)
+    if((<Element>event.target).className ==='confirm-button'){
+      return
+    }
+    
     this.open = !this.open;
   }
 
   confirm() {
+    this.open = !this.open;
     this.confirmOpen = !this.confirmOpen;
   }
 
-  verwijderRit(){
-    console.log('Verwijder rit!')
+  removeJourney(){
+    let confirm = this.confirm;
+    this.journeyService.deleteJourney(this.journey.journeyId, confirm);
+    this.removeEvent.emit(this.journey);
   }
 
   ngOnInit() {

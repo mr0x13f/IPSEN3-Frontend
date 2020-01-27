@@ -77,11 +77,19 @@ button{
     height: 50px;
 
     font-size: 1.4em;
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     border-style: none;
     border-radius: 50px;
     font-weight: bold;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-tertairy) !important;
+}
+
+button:focus {
+    background-color: var(--color-quadtairy) !important;
 }
 
 button:disabled, button[disabled]:hover{

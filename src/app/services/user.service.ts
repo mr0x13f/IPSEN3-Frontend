@@ -9,7 +9,9 @@ import { RegisterForm } from '../models/register-form.model';
 
 export class UserService {
 
-    constructor(private httpService:HttpService) {}
+    constructor(
+        private httpService:HttpService,
+    ) {}
 
     public getSelf(next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
 
@@ -44,6 +46,13 @@ export class UserService {
     public delete(next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
 
         this.httpService.delete("user")
+            .subscribe(next, error, complete)
+
+    }
+
+    public changePassword(newPassword:string, next?:(value:any)=>void, error?:(error:any)=>void, complete?:()=>void) {
+
+        this.httpService.post("user/resetpassword", {password:newPassword})
             .subscribe(next, error, complete)
 
     }

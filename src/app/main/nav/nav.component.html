@@ -1,8 +1,7 @@
 <nav>
     <ul>
-        <li [ngClass]="{active: currentPage == 1}" (click)="currentPage = 1"><a><i class="material-icons">add</i></a></li>
-        <li [ngClass]="{active: currentPage == 2}" (click)="currentPage = 2"><a><i class="material-icons">directions_car</i></a></li>
-        <li [ngClass]="{active: currentPage == 3}" (click)="currentPage = 3"><a><i class="material-icons">list</i></a></li>
+        <li [ngClass]="{active: isAddjourney}"><a [routerLink]="['/main/addjourney']"><i class="material-icons">add</i></a></li>
+        <li [ngClass]="{active: isLivetracker}"><a [routerLink]="['/main/livetracker']"><i class="material-icons">directions_car</i></a></li>
+        <li [ngClass]="{active: isOverview}"><a [routerLink]="['/main/overview']"><i class="material-icons">list</i></a></li>
     </ul>
-    <div id="logout" (click)="onLogout()">Logout</div>
 </nav>
