@@ -37,6 +37,7 @@ import { AccountSettingsComponent } from './main/header/account-settings/account
 import { ChangeNameComponent } from './main/header/account-settings/change-name/change-name.component';
 import { ChangePasswordComponent } from './main/header/account-settings/change-password/change-password.component';
 import { DeleteAccountComponent } from './main/header/account-settings/delete-account/delete-account.component';
+import { JourneyConfrimSavedComponent } from './main/content/addjourney/journey-confrim-saved/journey-confrim-saved.component';
 
 const material = [
   MatToolbarModule,
@@ -70,7 +71,8 @@ const material = [
     AccountSettingsComponent,
     ChangeNameComponent,
     ChangePasswordComponent,
-    DeleteAccountComponent
+    DeleteAccountComponent,
+    JourneyConfrimSavedComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +84,7 @@ const material = [
     material,
     ReactiveFormsModule
   ],
-  entryComponents: [DeleteAccountComponent, ChangeNameComponent, ChangePasswordComponent],
+  entryComponents: [DeleteAccountComponent, ChangeNameComponent, ChangePasswordComponent, JourneyConfrimSavedComponent],
   providers: [
     DatePipe
   ],
