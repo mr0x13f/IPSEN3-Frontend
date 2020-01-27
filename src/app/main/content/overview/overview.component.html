@@ -3,20 +3,19 @@
 <div class="container">
     <div class="sort-bar">
         <button class="btn" (click)='changeSortByDate()'>Sorteer op {{ sortByDate ? 'project' : 'datum' }}</button>
-        <select class="btn" name="" id="" *ngIf="!sortByDate">
-          <option value="">Projectnaam1</option>
-          <option value="">Projectnaam2</option>
-          <option value="">Projectnaam3</option>
-          <option value="">Projectnaam4</option>
-
+        <select class="btn" name="" id="" *ngIf="!sortByDate" [(ngModel)]='selectedProject'>
+            <option value="">Geen project</option>
+          <option *ngFor="let project of projects | keyvalue" [value]="project.value.projectId">{{project.value.name}}</option>
         </select>
     </div>
     <hr>
     
     <ul class="overview-list">
-        <li class="item">
-            <app-overview-item [journey]="journey" [project]="projects[journey.projectId]" (remove)="removeListItem($event)" *ngFor="let journey of journeys"></app-overview-item>  
-        </li>
+        <div *ngFor="let journey of journeys">
+            <li class="item">
+                <app-overview-item [journey]="journey" [project]="projects[journey.projectId]" (remove)="removeListItem($event)"  *ngIf="(sortByDate || journey.projectId === selectedProject)"></app-overview-item>  
+            </li>
+        </div>
     </ul>
 </div>
 

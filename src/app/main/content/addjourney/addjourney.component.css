@@ -31,6 +31,7 @@ form, form:active, form:focus {
 }
 ::ng-deep .mat-form-field-wrapper{
     margin-bottom: -1.50em;
+    color: var(--color-text-autofill);
  }
 
 ::-webkit-scrollbar { 
@@ -46,6 +47,7 @@ input {
     border-radius: 15px;
     background: var(--color-background-light);
     font-size: 1.2em;
+    
 }
 textarea{
     display: block;
@@ -58,6 +60,17 @@ textarea{
     color: var(--color-text-tertairy);
 
 }
+.mat-form-field.mat-form-field-invalid 
+.mat-form-field-ripple, 
+.mat-form-field.mat-form-field-invalid 
+.mat-form-field-ripple.mat-accent {
+    background-color: blue;
+}
+
+.mat-form-field-underline {
+    background-color: green;
+}
+
 select {
     border: none;
     padding: 0 10px;

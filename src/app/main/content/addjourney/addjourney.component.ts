@@ -6,6 +6,8 @@ import { Journey } from 'src/app/models/journey.model';
 import { DatePipe } from '@angular/common';
 import { Project } from 'src/app/models/project.model';
 import { ProjectService } from 'src/app/services/project.service';
+import { MatDialog } from '@angular/material';
+import { JourneyConfrimSavedComponent } from './journey-confrim-saved/journey-confrim-saved.component';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -27,7 +29,8 @@ export class AddjourneyComponent implements OnInit {
     private route:ActivatedRoute,
     private httpservice: HttpService,
     private datePipe: DatePipe,
-    private projectService: ProjectService
+    private projectService: ProjectService,
+    private dialog: MatDialog
     ){}
 
   ngOnInit() {
@@ -76,7 +79,6 @@ export class AddjourneyComponent implements OnInit {
 
   getLicenseplate(){
     if(localStorage.getItem('licensePlate')){
-      console.log('setvalue')
       this.projectForm.get('licensePlate').setValue(localStorage.getItem('licensePlate'))
     }
   }
@@ -132,16 +134,28 @@ export class AddjourneyComponent implements OnInit {
 
     this.httpservice.post("journey", postJourney)
     .subscribe(
-      data => console.log(data),
+      data => {
+        console.log(data);
+        this.journeySavedPopup();
+      },
       err => console.log(err),
       () => console.log('Request Completed')
 
     );
     this.saveLicenseplate(postData.licensePlate);
-    this.saveRate(postData.rate)
-    this.projectForm.reset();
+    this.saveRate(postData.rate);
     this.getLicenseplate();
     this.getRate();
 
+    this.projectForm.reset();
+    this.projectForm.markAsPristine();
+    this.projectForm.markAsUntouched();
+    this.projectForm.updateValueAndValidity();
+
+   }
+
+   journeySavedPopup(){
+
+    this.dialog.open(JourneyConfrimSavedComponent);
    }
 }

@@ -1,0 +1,12 @@
+.submit-button {
+    
+    font-size: 1.2em;
+    background-color: var(--color-primary);
+    color: var(--color-text-secondary);
+    border: none;
+    margin: 7px;
+    padding: 3px 20px;
+}
+div{
+    text-align: center;
+}
