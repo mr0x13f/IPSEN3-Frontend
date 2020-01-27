@@ -12,7 +12,8 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class ChangePasswordComponent implements OnInit {
   passwordForm: FormGroup;
-  passwordBool: boolean = true;
+  newPasswordBool: boolean = true;
+  oldPasswordBool: boolean = true;
 
   constructor(public dialogRef: MatDialogRef<ChangePasswordComponent>,
     public authService: AuthService,
@@ -42,11 +43,22 @@ export class ChangePasswordComponent implements OnInit {
     if(firstNewPassword == secondNewPassword){
       //Update password
       this.userService.update;
-      this.passwordBool =true;
-      // if(oldPassword == this.authService.user.password){POST.userService}
+      this.newPasswordBool =true;
+      this.authService.changePassword(oldPassword, firstNewPassword,
+        () => {
+          console.log("GOED")
+          this.dialogRef.close();
+        },() => {
+          //fout
+          console.log("FOUT")
+          this.oldPasswordBool =false;
+          
+      
+        });
       
     }else{
-      this.passwordBool= false;
+      this.newPasswordBool= false;
+      this.oldPasswordBool= true;
       
     }
   }

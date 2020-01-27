@@ -1,16 +1,22 @@
-<div class="container">
+<div>
     <div 
-        class="row"    
+        class="button-box"    
         (popupClosed)="onClosePopup()"   
         >
-        <button 
-            mat-raised-button
-            (click)="showChanceName()">Naam wijzigen</button>            
-        <button 
-            mat-raised-button  
-            (click)="showChancePassword()">Wachtwoord wijzigen</button>
-        <button 
-            mat-raised-button
-            (click)="showDeleteAccount()">Delete account</button>
+        <div class="settings-button">
+            <button 
+                mat-raised-button
+                (click)="showChanceName()">Naam wijzigen</button>    
+        </div>
+        <div class="settings-button">
+            <button 
+                mat-raised-button  
+                (click)="showChancePassword()">Wachtwoord wijzigen</button>
+        </div>
+        <div class="settings-button">
+            <button 
+                mat-raised-button
+                (click)="showDeleteAccount()">Delete account</button>
+        </div>
     </div>
 </div>

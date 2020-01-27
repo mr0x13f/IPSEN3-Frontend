@@ -81,7 +81,7 @@ export class AddjourneyComponent implements OnInit {
                             licensePlate: string;
                             description: string}){
 
-    console.log("DITTTUUU "+ postData.destination);
+   
 
     let dateString = this.sanitizeDate(postData.date);
 
