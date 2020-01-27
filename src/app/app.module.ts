@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, TemplateRef } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { MenuModule } from './main/menu/menu.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from "@angular/common";
 import { FormsModule } from '@angular/forms';
@@ -77,12 +76,9 @@ const material = [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MenuModule,
-    BrowserAnimationsModule,
     material,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     material,
     ReactiveFormsModule
   ],
