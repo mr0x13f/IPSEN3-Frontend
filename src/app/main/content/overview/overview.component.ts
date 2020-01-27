@@ -18,6 +18,7 @@ export class OverviewComponent implements OnInit {
   journeys:Journey[] = [];
   projects:{[id:string]:Project} = {};
   sortByDate = true;
+  selectedProject: string = null;
 
   constructor(
     private httpService:HttpService,
@@ -34,6 +35,7 @@ export class OverviewComponent implements OnInit {
 
   changeSortByDate(){
     this.sortByDate = !this.sortByDate;
+    this.getJourneys();
   }
 
   getJourneys() {
