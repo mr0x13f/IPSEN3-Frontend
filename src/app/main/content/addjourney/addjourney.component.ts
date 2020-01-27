@@ -18,7 +18,7 @@ export class AddjourneyComponent implements OnInit {
   responseStatus:Object= [];
   status:boolean ;
   licensePlate: string;
-  projects:Project[];
+  projects: Project[];
 
 
   constructor(private http: HttpClient,
