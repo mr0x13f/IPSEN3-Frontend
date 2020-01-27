@@ -1,6 +1,6 @@
 <form autocomplete="off" [formGroup]="projectForm" (ngSubmit)="onSaveJourney(projectForm.value)">
     <div class="box">
-        <label class="special-span">Alle velden met een * zijn verplicht
+        <label class="special-span">Velden met een * zijn verplicht
 
         </label>
         <label> </label>
@@ -136,9 +136,6 @@
                 autocomplete="off"
                 ></textarea>
         </div>
-        <button
-            class="btn btn-success"
-            type="submit"
-            [disabled]="!projectForm.valid">Opslaan</button>
+        <button class="submit-button" type="submit" [disabled]="!projectForm.valid">Rit Opslaan</button>
     </div>
     </form>

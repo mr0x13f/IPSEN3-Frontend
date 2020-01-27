@@ -7,6 +7,10 @@
             <div class="spinner" *ngIf="lisLoading"> 
                 <app-loading-spinner></app-loading-spinner>
             </div>
+            <div class="image">
+                <img src="../../assets/logo.png" alt="">
+                <h1 id="logo-subtext">Rit Registratie</h1>
+            </div>
             <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
                 <div class="form-group entry" *ngIf="!isLoginMode">
                     <label for="name" class="label">Full name</label>

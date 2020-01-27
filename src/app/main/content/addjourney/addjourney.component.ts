@@ -30,6 +30,7 @@ export class AddjourneyComponent implements OnInit {
   ngOnInit() {
     this.createFormGroup();
     this.getLicenseplate();
+    this.getRate();
 
     // this.onBuildFormGroup();
   }
@@ -100,6 +101,19 @@ export class AddjourneyComponent implements OnInit {
 
   }
 
+  getRate(){
+    if(localStorage.getItem('rate')){
+      this.projectForm.get('rate').setValue(localStorage.getItem('rate'))
+    }
+  }
+
+  saveRate(rate: number){
+    if(localStorage.getItem('rate')){
+      localStorage.removeItem('rate');
+    }
+    localStorage.setItem('rate', String(rate))
+  }
+
 
   onSaveJourney(postData: { kilometers: number;
                             date: Date;
@@ -137,8 +151,10 @@ export class AddjourneyComponent implements OnInit {
 
     );
     this.saveLicenseplate(postData.licensePlate);
+    this.saveRate(postData.rate)
     this.projectForm.reset();
     this.getLicenseplate();
+    this.getRate();
 
 
    }
