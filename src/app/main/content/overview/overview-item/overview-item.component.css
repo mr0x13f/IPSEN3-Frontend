@@ -127,8 +127,24 @@
     font-style: italic;
 }
 
+.hidden-data {
+    display: none;
+}
+
+.display-data {
+    display: contents;
+}
+
 @media screen and (min-width: 800px) {
     .container:hover {
         background-color: var(--color-background-medium);
+    }
+
+    .hidden-data {
+        display: contents;
+    }
+
+    .display-data {
+        display: none;
     }
 }
