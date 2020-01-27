@@ -12,7 +12,7 @@ import { AddjourneyComponent } from './main/content/addjourney/addjourney.compon
 const appRoutes: Routes = [
     { path: '', redirectTo: '/auth', pathMatch: 'full' },
     { path: 'auth', component: AuthComponent },
-    { path: 'main', component: MainComponent, /*canActivate: [AuthGuard],*/ children: [
+    { path: 'main', component: MainComponent, canActivate: [AuthGuard], children: [
       { path: '', redirectTo: '/main/livetracker', pathMatch: 'full' },
       { path: 'addjourney', component: AddjourneyComponent, data: {animation: "addjourney"} },
       { path: 'livetracker', component: LivetrackerComponent, data: {animation: "livetracker"} },
