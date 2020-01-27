@@ -15,6 +15,7 @@ const appRoutes: Routes = [
     { path: 'main', component: MainComponent, canActivate: [AuthGuard], children: [
       { path: '', redirectTo: '/main/livetracker', pathMatch: 'full' },
       { path: 'addjourney', component: AddjourneyComponent, data: {animation: "addjourney"} },
+      { path: 'addjourney/:kilometers', component: AddjourneyComponent, data: {animation: "addjourney"} },
       { path: 'livetracker', component: LivetrackerComponent, data: {animation: "livetracker"} },
       { path: 'overview', component: OverviewComponent, data: {animation: "overview"} }
     ]},

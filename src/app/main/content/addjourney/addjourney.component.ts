@@ -6,6 +6,7 @@ import { Journey } from 'src/app/models/journey.model';
 import { DatePipe } from '@angular/common';
 import { Project } from 'src/app/models/project.model';
 import { ProjectService } from 'src/app/services/project.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-addjourney',
@@ -19,9 +20,11 @@ export class AddjourneyComponent implements OnInit {
   status:boolean ;
   licensePlate: string;
   projects:Project[];
+  livetrackerKilometers = "";
 
 
   constructor(private http: HttpClient,
+    private route:ActivatedRoute,
     private httpservice: HttpService,
     private datePipe: DatePipe,
     private projectService: ProjectService
@@ -32,6 +35,13 @@ export class AddjourneyComponent implements OnInit {
     this.getLicenseplate();
     this.getRate();
     this.loadProjects();
+    this.loadLivetrackerValue();
+  }
+
+  loadLivetrackerValue() {
+
+    this.livetrackerKilometers = this.route.snapshot.params["kilometers"] || "";
+
   }
 
   loadProjects() {
