@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { HttpService } from 'src/app/services/http.service';
 import { Journey } from 'src/app/models/journey.model';
 import { DatePipe } from '@angular/common';
+import { Project } from 'src/app/models/project.model';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-addjourney',
@@ -16,22 +18,27 @@ export class AddjourneyComponent implements OnInit {
   responseStatus:Object= [];
   status:boolean ;
   licensePlate: string;
+  projects:Project[];
 
 
   constructor(private http: HttpClient,
     private httpservice: HttpService,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private projectService: ProjectService
     ){}
 
   ngOnInit() {
     this.createFormGroup();
     this.getLicenseplate();
     this.getRate();
-
-    // this.onBuildFormGroup();
+    this.loadProjects();
   }
 
-  
+  loadProjects() {
+    this.projectService.listProjects(projects => {
+      this.projects = projects;
+    })
+  }
 
   sanitizeDate(date:Date): string {
 
@@ -61,7 +68,6 @@ export class AddjourneyComponent implements OnInit {
     if(localStorage.getItem('licensePlate')){
       console.log('setvalue')
       this.projectForm.get('licensePlate').setValue(localStorage.getItem('licensePlate'))
-
     }
   }
 
@@ -70,7 +76,6 @@ export class AddjourneyComponent implements OnInit {
       localStorage.removeItem('licensePlate')
     }
     localStorage.setItem('licensePlate', licensePlate);
-
   }
 
   getRate(){
@@ -85,7 +90,6 @@ export class AddjourneyComponent implements OnInit {
     }
     localStorage.setItem('rate', String(rate))
   }
-
 
   onSaveJourney(postData: { kilometers: number;
                             date: Date;
@@ -122,7 +126,6 @@ export class AddjourneyComponent implements OnInit {
       err => console.log(err),
       () => console.log('Request Completed')
 
-
     );
     this.saveLicenseplate(postData.licensePlate);
     this.saveRate(postData.rate)
@@ -130,9 +133,5 @@ export class AddjourneyComponent implements OnInit {
     this.getLicenseplate();
     this.getRate();
 
-
    }
-
-
-
 }
