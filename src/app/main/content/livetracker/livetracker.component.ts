@@ -45,6 +45,7 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
   saveLocation() {
       
     navigator.geolocation.getCurrentPosition((position) => {
+        console.log("PUSH POS");
         this.coordinatesList.push(position.coords);
     })
 
@@ -53,6 +54,8 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
   stopTracking() {
 
     clearInterval(this.interval);
+
+    console.log(this.coordinatesList);
 
     let totalDistance = this.calculateTotalDistance();
 
