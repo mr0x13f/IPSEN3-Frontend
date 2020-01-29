@@ -35,7 +35,7 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
   }
 
   startTracking() {
-
+    this.coordinatesList = [];
     this.saveLocation();
     
     this.interval = setInterval( () => { this.saveLocation(); }, this.locationInterval);
@@ -75,7 +75,7 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
 
     }
 
-    return distance;
+    return Math.round(distance);
 
   }
 
