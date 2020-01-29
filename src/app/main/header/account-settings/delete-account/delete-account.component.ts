@@ -12,14 +12,14 @@ import { UserService } from 'src/app/services/user.service';
 export class DeleteAccountComponent implements OnInit {
   currentUser = this.authService.user;
 
-  constructor(public dialogRef: MatDialogRef<DeleteAccountComponent>,
+  constructor(
+    public dialogRef: MatDialogRef<DeleteAccountComponent>,
     public authService: AuthService,
     public router: Router,
-    public userService: UserService) { }
-    
+    public userService: UserService
+  ) { }
 
   ngOnInit() {
-    
   }
 
   closeDeleteAccountPopup(){
@@ -30,10 +30,7 @@ export class DeleteAccountComponent implements OnInit {
     this.userService.delete(() => {
       this.authService.clearAuth();
       this.onNavigateToInlog()
-      console.log("Het werkt")
-    }, error => {
-      console.log("HEEE het werkt niet")
-    })
+    }, error => {})
 
   }
 
@@ -43,9 +40,5 @@ export class DeleteAccountComponent implements OnInit {
     this.router.navigate(['/auth'])
     
   }
-
-  
-
-  
 
 }

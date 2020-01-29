@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewContainerRef } from '@angular/core';
-import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { DeleteAccountComponent } from './delete-account/delete-account.component';
 import { ChangeNameComponent } from './change-name/change-name.component';
@@ -14,9 +13,9 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 export class AccountSettingsComponent implements OnInit {
 
 
-  constructor(private overlay: Overlay, 
-    private viewContainerRef: ViewContainerRef,
-    private dialog: MatDialog) {}
+  constructor(
+    private dialog: MatDialog
+  ) {}
 
   ngOnInit() {
   }
@@ -30,9 +29,6 @@ export class AccountSettingsComponent implements OnInit {
   showDeleteAccount(){
     this.dialog.open(DeleteAccountComponent);
   }
-
-  
-
 
 }
 
