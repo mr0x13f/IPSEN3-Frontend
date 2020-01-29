@@ -8,8 +8,7 @@
     max-width: 600px;
     border-radius: 20px;
     z-index: 1;
-    height: 75vh;
-    /* max-height: calc(84vh - 5vh); */
+    height: 79vh;
 }
 
 .overview-list {
@@ -17,7 +16,7 @@
     list-style: none;
     margin: auto;
     padding: 0;
-    height: 63vh;
+    height: 67vh;
     overflow-y: auto;
 }
 
@@ -57,6 +56,16 @@ hr{
     color: var(--color-primary);
     margin: 9vh auto 0 auto;
     font-size: 2em;
+}
+
+@media screen and (max-height: 900px) {
+    .container {
+        height: 74vh;
+    }
+
+    .overview-list {
+        height: 61vh;
+    }
 }
 
 @media screen and (max-height: 800px) {

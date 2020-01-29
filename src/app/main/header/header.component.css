@@ -29,7 +29,7 @@ mat-icon {
     color: var(--color-background-light);
 }
 
-app-menu3 {
+app-menu {
     z-index: 7;
     height: 100%;
     background-color: var(--color-secondary);
@@ -54,7 +54,7 @@ app-menu3 {
         max-height: 10vh;
     }
 
-    app-menu3 {
+    app-menu {
         width: 100vw;
         left: -100vw;
     }
