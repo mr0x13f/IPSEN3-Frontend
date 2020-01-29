@@ -50,7 +50,7 @@ mat-icon {
 }
 
 ::ng-deep .mat-expansion-panel-content {
-    background-color: var(--color-tertairy);
+    background-color: var(--color-primary);
 }
 
 .menulogo {
@@ -64,7 +64,7 @@ mat-icon {
 @media screen and (max-width: 800px) {
     mat-expansion-panel, .logout {
         width: 90vw;
-        min-height: 8vh;
+        min-height: 5vh;
     }
 
     mat-icon {
@@ -82,5 +82,11 @@ mat-icon {
 
     mat-panel-title {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .menu-options {
+        padding-top: 12.5vh;
     }
 }

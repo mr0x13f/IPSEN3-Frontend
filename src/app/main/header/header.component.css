@@ -10,7 +10,7 @@
 
 .logo {
     margin: 1em 1em 1em 0;
-    width: 10vw;
+    max-height: 5vh;
     float: right;
 }
 
@@ -51,7 +51,7 @@ app-menu3 {
 
 @media screen and (max-width: 800px) {
     .logo {
-        width: 50vw;
+        max-height: 10vh;
     }
 
     app-menu3 {
