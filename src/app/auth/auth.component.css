@@ -77,7 +77,7 @@ button{
     height: 50px;
 
     font-size: 1.4em;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     border-style: none;
     border-radius: 50px;
     font-weight: bold;
