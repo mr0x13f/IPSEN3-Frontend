@@ -46,11 +46,8 @@ export class ChangePasswordComponent implements OnInit {
       this.newPasswordBool =true;
       this.authService.changePassword(oldPassword, firstNewPassword,
         () => {
-          console.log("GOED")
           this.dialogRef.close();
         },() => {
-          //fout
-          console.log("FOUT")
           this.oldPasswordBool =false;
           
         });

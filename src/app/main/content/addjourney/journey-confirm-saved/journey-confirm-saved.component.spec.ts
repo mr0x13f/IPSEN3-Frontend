@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JourneyConfrimSavedComponent } from './journey-confrim-saved.component';
+import { JourneyConfirmSavedComponent } from './journey-confirm-saved.component';
 
 describe('JourneyConfrimSavedComponent', () => {
-  let component: JourneyConfrimSavedComponent;
-  let fixture: ComponentFixture<JourneyConfrimSavedComponent>;
+  let component: JourneyConfirmSavedComponent;
+  let fixture: ComponentFixture<JourneyConfirmSavedComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JourneyConfrimSavedComponent ]
+      declarations: [ JourneyConfirmSavedComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(JourneyConfrimSavedComponent);
+    fixture = TestBed.createComponent(JourneyConfirmSavedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

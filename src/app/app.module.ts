@@ -25,10 +25,8 @@ import { NavComponent } from './main/nav/nav.component';
 import { OverviewComponent } from './main/content/overview/overview.component';
 import { AddjourneyComponent } from './main/content/addjourney/addjourney.component';
 import { LivetrackerComponent } from './main/content/livetracker/livetracker.component';
-import { BackgroundComponent } from './main/background/background.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './main/main.component';
-import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { OverviewItemComponent } from './main/content/overview/overview-item/overview-item.component';
 import { AuthComponent } from './auth/auth.component';
 import { HeaderComponent } from './main/header/header.component';
@@ -37,7 +35,7 @@ import { AccountSettingsComponent } from './main/header/account-settings/account
 import { ChangeNameComponent } from './main/header/account-settings/change-name/change-name.component';
 import { ChangePasswordComponent } from './main/header/account-settings/change-password/change-password.component';
 import { DeleteAccountComponent } from './main/header/account-settings/delete-account/delete-account.component';
-import { JourneyConfrimSavedComponent } from './main/content/addjourney/journey-confrim-saved/journey-confrim-saved.component';
+import { JourneyConfirmSavedComponent } from './main/content/addjourney/journey-confirm-saved/journey-confirm-saved.component';
 
 const material = [
   MatToolbarModule,
@@ -61,18 +59,16 @@ const material = [
     OverviewComponent,
     AddjourneyComponent,
     LivetrackerComponent,
-    BackgroundComponent,
     OverviewItemComponent,
     MainComponent,
     AuthComponent,
-    LoadingSpinnerComponent,
     MenuComponent,
     HeaderComponent,
     AccountSettingsComponent,
     ChangeNameComponent,
     ChangePasswordComponent,
     DeleteAccountComponent,
-    JourneyConfrimSavedComponent
+    JourneyConfirmSavedComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +80,7 @@ const material = [
     material,
     ReactiveFormsModule
   ],
-  entryComponents: [DeleteAccountComponent, ChangeNameComponent, ChangePasswordComponent, JourneyConfrimSavedComponent],
+  entryComponents: [DeleteAccountComponent, ChangeNameComponent, ChangePasswordComponent, JourneyConfirmSavedComponent],
   providers: [
     DatePipe
   ],

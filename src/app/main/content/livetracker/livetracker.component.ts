@@ -1,6 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { toBase64String } from '@angular/compiler/src/output/source_map';
-import { HttpService } from 'src/app/services/http.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
@@ -12,7 +10,7 @@ import { Router } from '@angular/router';
 export class LivetrackerComponent implements OnInit, OnDestroy {
 
   isTracking: boolean = false;
-  interval;
+  interval:any;
   coordinatesList: Coordinates[] = [];
   locationInterval = 10 * 1000;
 
@@ -35,7 +33,7 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
   }
 
   startTracking() {
-
+    this.coordinatesList = [];
     this.saveLocation();
     
     this.interval = setInterval( () => { this.saveLocation(); }, this.locationInterval);
@@ -45,7 +43,6 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
   saveLocation() {
       
     navigator.geolocation.getCurrentPosition((position) => {
-        console.log("PUSH POS");
         this.coordinatesList.push(position.coords);
     })
 
@@ -54,8 +51,6 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
   stopTracking() {
 
     clearInterval(this.interval);
-
-    console.log(this.coordinatesList);
 
     let totalDistance = this.calculateTotalDistance();
 
@@ -75,7 +70,7 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
 
     }
 
-    return distance;
+    return Math.round(distance);
 
   }
 

@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Journey } from "../../../models/journey.model";
-import { HttpService } from 'src/app/services/http.service';
-import { map } from 'rxjs/internal/operators/map';
 import { JourneyService } from 'src/app/services/journey.service';
-import { AuthService } from 'src/app/services/auth.service';
 import { ProjectService } from 'src/app/services/project.service';
 import { Project } from 'src/app/models/project.model';
 
@@ -21,9 +18,7 @@ export class OverviewComponent implements OnInit {
   selectedProject: string = null;
 
   constructor(
-    private httpService:HttpService,
     private journeyService:JourneyService,
-    private authService:AuthService,
     private projectService:ProjectService
   ) { }
 
