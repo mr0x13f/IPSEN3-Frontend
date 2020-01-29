@@ -18,13 +18,14 @@
                             matInput placeholder="00"
                             formControlName="kilometers"
                             autocomplete="off"
+                            [value] = "livetrackerKilometers"
                             >
                     </div>
                 </div>
             <div class="col-xs-6">
                 <div class="form-group">
                     <label style="padding-bottom: 5px">Datum*</label>
-                    <mat-form-field class="form-field-date">
+                    <mat-form-field disableRipple="true" class="form-field-date">
                         <input
                             style="position: absolute; top: -20px; left: 0px; font-size: 11px;"
                             formControlName="date"
