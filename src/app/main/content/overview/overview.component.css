@@ -60,7 +60,7 @@ hr{
 
 @media screen and (max-height: 900px) {
     .container {
-        height: 73vh;
+        height: 74vh;
     }
 
     .overview-list {
@@ -70,11 +70,11 @@ hr{
 
 @media screen and (max-height: 800px) {
     .container {
-        height: 74vh;
+        height: 70vh;
     }
 
     .overview-list {
-        height: 61vh;
+        height: 58vh;
     }
     
     .title {
