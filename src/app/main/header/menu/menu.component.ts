@@ -3,11 +3,11 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-menu3',
-  templateUrl: './menu3.component.html',
-  styleUrls: ['./menu3.component.css']
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
 })
-export class Menu3Component implements OnInit {
+export class MenuComponent implements OnInit {
 
   constructor(
     private router:Router,
