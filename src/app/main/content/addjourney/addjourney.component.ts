@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { HttpService } from 'src/app/services/http.service';
 import { Journey } from 'src/app/models/journey.model';
 import { DatePipe } from '@angular/common';
 import { Project } from 'src/app/models/project.model';
 import { ProjectService } from 'src/app/services/project.service';
 import { MatDialog } from '@angular/material';
-import { JourneyConfrimSavedComponent } from './journey-confrim-saved/journey-confrim-saved.component';
+import { JourneyConfirmSavedComponent } from './journey-confirm-saved/journey-confirm-saved.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-addjourney',
@@ -16,25 +16,34 @@ import { JourneyConfrimSavedComponent } from './journey-confrim-saved/journey-co
 })
 
 export class AddjourneyComponent implements OnInit {
+
   projectForm: FormGroup;
   responseStatus:Object= [];
   status:boolean ;
   licensePlate: string;
-  projects: Project[];
+  projects:Project[];
+  livetrackerKilometers = "";
 
-
-  constructor(private http: HttpClient,
+  constructor(
+    private route:ActivatedRoute,
     private httpservice: HttpService,
     private datePipe: DatePipe,
     private projectService: ProjectService,
     private dialog: MatDialog
-    ){}
+  ){}
 
   ngOnInit() {
     this.createFormGroup();
     this.getLicenseplate();
     this.getRate();
     this.loadProjects();
+    this.loadLivetrackerValue();
+  }
+
+  loadLivetrackerValue() {
+
+    this.livetrackerKilometers = this.route.snapshot.params["kilometers"] || "";
+
   }
 
   loadProjects() {
@@ -125,11 +134,10 @@ export class AddjourneyComponent implements OnInit {
     this.httpservice.post("journey", postJourney)
     .subscribe(
       data => {
-        console.log(data);
         this.journeySavedPopup();
       },
-      err => console.log(err),
-      () => console.log('Request Completed')
+      err => {},
+      () => {}
 
     );
     this.saveLicenseplate(postData.licensePlate);
@@ -148,6 +156,6 @@ export class AddjourneyComponent implements OnInit {
 
    journeySavedPopup(){
 
-    this.dialog.open(JourneyConfrimSavedComponent);
+    this.dialog.open(JourneyConfirmSavedComponent);
    }
 }

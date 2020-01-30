@@ -16,8 +16,6 @@ export class NavComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
-    this.updatePage();
-
     this.router.events.subscribe(
       (val) => {
         if (val) {
@@ -27,16 +25,6 @@ export class NavComponent implements OnInit {
           this.isOverview = url === "/main/overview";
         }
       });
-  }
-
-
-  updatePage() {
-    
-  }
-
-  onSettings(){
-    this.router.navigate(['/settings'])
-
   }
 
 }

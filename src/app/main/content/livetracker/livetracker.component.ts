@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { toBase64String } from '@angular/compiler/src/output/source_map';
-import { HttpService } from 'src/app/services/http.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-livetracker',
@@ -11,11 +10,12 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LivetrackerComponent implements OnInit, OnDestroy {
 
   isTracking: boolean = false;
-  interval;
+  interval:any;
   coordinatesList: Coordinates[] = [];
   locationInterval = 10 * 1000;
 
   constructor(
+    private router:Router,
     private authService:AuthService
   ) { }
 
@@ -33,7 +33,7 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
   }
 
   startTracking() {
-
+    this.coordinatesList = [];
     this.saveLocation();
     
     this.interval = setInterval( () => { this.saveLocation(); }, this.locationInterval);
@@ -52,7 +52,9 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
 
     clearInterval(this.interval);
 
-    console.log(this.calculateTotalDistance());
+    let totalDistance = this.calculateTotalDistance();
+
+    this.router.navigate(["/main/addjourney/", totalDistance]);
 
   }
 
@@ -68,7 +70,7 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
 
     }
 
-    return distance;
+    return Math.round(distance);
 
   }
 
@@ -84,7 +86,7 @@ export class LivetrackerComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
 
-    this.stopTracking() 
+    clearInterval(this.interval);
 
   }
 

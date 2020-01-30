@@ -90,7 +90,7 @@ export class AuthService {
 
   private getUserFromDatabase() {
     this.httpService.get("user").pipe(
-      tap((receivedData: User) => console.log(receivedData)),
+      tap((receivedData: User) => {}),
       map((receivedData: User) => {
         this.user = new User(
           receivedData.email,

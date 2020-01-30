@@ -10,7 +10,7 @@
 
 .logo {
     margin: 1em 1em 1em 0;
-    width: 10vw;
+    max-height: 5vh;
     float: right;
 }
 
@@ -29,7 +29,7 @@ mat-icon {
     color: var(--color-background-light);
 }
 
-app-menu3 {
+app-menu {
     z-index: 7;
     height: 100%;
     background-color: var(--color-secondary);
@@ -51,10 +51,10 @@ app-menu3 {
 
 @media screen and (max-width: 800px) {
     .logo {
-        width: 50vw;
+        max-height: 10vh;
     }
 
-    app-menu3 {
+    app-menu {
         width: 100vw;
         left: -100vw;
     }

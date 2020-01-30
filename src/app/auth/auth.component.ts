@@ -62,7 +62,6 @@ export class AuthComponent {
     form.reset();
     this.isLoading = false;
 
-
   }
 
 }
