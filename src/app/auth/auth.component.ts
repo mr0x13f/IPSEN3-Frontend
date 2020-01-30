@@ -15,7 +15,8 @@ export class AuthComponent {
   isLoginMode = true;
   isLoading = false;
   error: string = null;
-
+  wrongPasswordBool: boolean = true;
+ 
   constructor(private userService: UserService,
     private authService: AuthService,
     private router: Router) { }
@@ -47,11 +48,14 @@ export class AuthComponent {
       const confirmPassword = form.value.confirm_password;
 
       if (password === confirmPassword) {
+        this.wrongPasswordBool =true;
         const registerForm = new RegisterForm(email, name, password)
         this.userService.register(registerForm, () => {
           //On succes
           this.onSwitchMode()
         });
+      }else{
+        this.wrongPasswordBool= false;
       }
     }
 

@@ -134,13 +134,15 @@ export class AddjourneyComponent implements OnInit {
     );
     this.saveLicenseplate(postData.licensePlate);
     this.saveRate(postData.rate);
-    this.getLicenseplate();
-    this.getRate();
+    
 
     this.projectForm.reset();
     this.projectForm.markAsPristine();
     this.projectForm.markAsUntouched();
     this.projectForm.updateValueAndValidity();
+
+    this.getLicenseplate();
+    this.getRate();
 
    }
 

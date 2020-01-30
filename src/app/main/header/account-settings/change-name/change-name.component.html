@@ -5,7 +5,7 @@
         </div> -->
         <div class="header">
             <h3>
-                Change username?
+                Naam wijzigen
             </h3>
         </div>
 
@@ -16,7 +16,7 @@
             
             <div class="form-group">
                 <div>
-                    <p>Jouw username: {{ currentUser.name }}</p>
+                    <p>Huidige naam: {{ currentUser.name }}</p>
                     <input
                         formControlName="username"
                         class="input"
@@ -34,7 +34,7 @@
                         class="btn btn-success"
                         type="submit"
                         [disabled]="!nameForm.valid">
-                    Ja</button>                
+                    Opslaan</button>                
                 
                     <button
                         style="float: right;"
@@ -42,7 +42,7 @@
                         class="btn btn-danger"
                         type="button"
                         (click)="closeChangeNamePopup()">
-                    Nee</button>
+                    Cancel</button>
                 </div>
             </div>
             
